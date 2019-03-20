@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Get started with framing pictures and artwork online</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" media="all" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+
+
+
+  <script src="config.js"></script>
+
+  <!-- data layer var needs to be declared above :google_data_layer and the google_tag_manager snippet. Google_data_layer needs to be above the snippet as well. Vars pushed on the pageview initiatialization -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="nav_and_drawer_wrapper">
+        <div class="top_nav_wrapper">
+      
+          <nav class="regular-nav nav white_background_nav" role="navigation"  >
+            <ul class="u-pull-left list-horizontal">
+              <li>
+                <a href="index.html" title="Nirathisayam - Custom Photo Frames & Trays">
+                    <img alt="Custom Picture Frames Online - Nirathisayam" style="height:33px; " src="../img/test-2.png" />
+                  </a>
+              </li>
+              <li class="responsive_priority_4"><a href="index.html" title="Nirathisayam - Custom Photo Frames & Trays">MADE BY YOU</a></li>
+            </ul>
+      
+            <ul class="u-pull-right list-horizontal">
+              <li><a href="../index.html"><span class="menu_link_inline_new_tag">close</span></a></li>
+      </ul>
+      
+            
+          </nav>
+        </div>
+      
+        
+      </header>
+<div class="nav_drawer_darken_page"></div>
+
+
+  <div class="get_started_page" style="padding-top:50px;">
+    <div class="page_wrapper no-top-padding">
+      <p class="get_started_main_description align_center"><span style="font-weight:200; font-size:24px;">Measure the width and height of your artwork, rounding up to the nearest 1/8".</span><br/>
+        <span style="font-size:16px;">Measuring in 
+           <a href="#" class="convert_to_inch_link active_dimensions_link dimension_link">Inches</a> / <a href="#" class="convert_to_cm_link dimension_link">Centimeters</a></div>
+
+        </span>
+         
+      <div class="align_center m-top-50">
+
+        <div class="get_started_dimensions_select" style="max-width:1200px; margin: 0 auto; width:100%; text-align:center; position:relative;">
+          <div class="m-bottom-30">
+            <div class="mobile_inches_cm">
+            </div>
+            <div class="columns is-mobile dimensions_numbers_columns">
+              <div class="column">
+                <div class="dimension_width_slider_edit_block">
+                  <span class="artwork_width_slider_value_integer dimensions_value_text">10</span>
+                  <span class="slider_value_fraction">
+                  </span>
+                </div>
+              </div>
+              <div class="dimension_unit_block">
+                X
+              </div>
+              <div class="column">
+                <div class="dimension_height_slider_edit_block">
+                  <span class="artwork_height_slider_value_integer dimensions_value_text">12</span>
+                  <span class="slider_value_fraction">
+                    <span class="artwork_height_slider_value_fraction" style="color:#c78a39"></span>
+                  </span>
+                  <span class="fraction_arrows fraction_height_arrows"><a class="fa fa-arrow-up fraction_arrow_up" data-dimension="y" data-value='up'></a><br/><a class="fa fa-arrow-down" data-dimension="y" data-value='down'></a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns is-centered m-top-40">
+            <div class="column m-bottom-15">
+              <input class="artwork_width_slider" type="range" min="4" max="36" step=".125" value="10.5" data-orientation="horizontal" />
+              <div class="m-top-20">
+                <span class="dimension_label" style="color:green;">Width</span>
+                <span class="decimal_label">( <span class="width_decimal_text">10.5</span>" )</span>
+              </div>
+            </div>
+            <div class="column purple_slider_fill m-bottom-15">
+              <input class="artwork_height_slider" type="range" min="4" max="36" step=".125" value="12" data-orientation="horizontal" />
+              <div class="m-top-20">
+                <span class="dimension_label" style="color:#c78a39">Height</span>
+                <span class="decimal_label">( <span class="height_decimal_text">12</span>" )</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-top-40 align_center">
+            <a class="btn big_hero_btn dark_blue_hero_btn get_started_slider_frame_it_btn" rel="nofollow">Frame It</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+<script src="rangeslider.min.js"></script>
+<script>
+  $(document).ready(function() {
+    //starting values
+    window.artDimensionsWidth = 10.5;
+    window.artDimensionsHeight = 12;
+    window.dimensionUnits = "\"";
+    window.dimensionUnitInteger = 1; // 1 = inches. 2 = cm
+    window.maxValue = 36;
+    var widthRemainder;
+    var heightRemainder;
+    var tooltipOversizeContent = 'Artwork bigger than this requires a custom quote. Please <a class="typeform-share link" href="/projects/new" data-mode="1">complete this form</a>.';
+    var heightOversizeTooltipShowing = false;
+    var widthOversizeTooltipShowing = false;
+
+    $('.artwork_height_slider_value_integer, .artwork_width_slider_value_integer').tooltipster({
+      position: 'top',
+      trigger: 'custom',
+      content: '',
+      interactive: true
+    });
+
+    function changeFrameItLink(x, y) {
+      x = x < 4 ? 4 : x;
+      y = y < 4 ? 4 : y;
+
+      $('.get_started_slider_frame_it_btn').attr('href', 'frames/new.html?width=' + x + '&height=' + y);
+    }
+
+    function convertToInchesRoundToNearestEighth(val) {
+      result =  parseFloat((Math.round((val / 2.54)*8)/8).toFixed(3));
+      return result;
+    }
+
+    $('.fraction_arrows a').click(function(e) {
+      var dimension = $(this).data('dimension') === 'x' ? window.artDimensionsWidth : window.artDimensionsHeight;
+      var dimensionClass = $(this).data('dimension') === 'x' ? '.artwork_width_slider' : '.artwork_height_slider';
+
+      var val = $(this).data('value') === 'up' ? dimension + 0.125 : dimension - 0.125;
+      $(dimensionClass).val(val).change();
+    });
+
+    $('.convert_to_cm_link').click(function(e) {
+      e.preventDefault;
+      if (window.dimensionUnitInteger !== 2) {
+        window.maxValue = 91;
+        window.dimensionUnits = " cm";
+        window.dimensionUnitInteger = 2;
+        var widthValInCentimeters = Math.round(window.artDimensionsWidth * 2.54);
+        var heightValInCentimeters = Math.round(window.artDimensionsHeight * 2.54);
+        $('.artwork_width_slider').prop('min', 10); 
+        $('.artwork_width_slider').prop('max', 91);
+        $('.artwork_width_slider').prop('step', 1);
+        $('.artwork_width_slider').prop('value', widthValInCentimeters);
+
+        $('.artwork_height_slider').prop('min', 10); 
+        $('.artwork_height_slider').prop('max', 91);
+        $('.artwork_height_slider').prop('step', 1);
+        $('.artwork_height_slider').prop('value', heightValInCentimeters);
+
+        $('.artwork_width_slider, .artwork_height_slider').rangeslider('update', true);
+
+        $('.dimension_link').removeClass('active_dimensions_link');
+        $(this).addClass('active_dimensions_link');
+        $('.artwork_height_slider_value_integer').addClass('cm_spacing_correction');
+      }
+    });
+
+    $('.convert_to_inch_link').click(function(e) {
+      e.preventDefault;
+      if (window.dimensionUnitInteger !== 1) {
+        window.maxValue = 36;
+        window.dimensionUnits = "\"";
+        window.dimensionUnitInteger = 1;
+        $('.artwork_width_slider').prop('min', 4); 
+        $('.artwork_width_slider').prop('max', 36);
+        $('.artwork_width_slider').prop('step', 0.125);
+        $('.artwork_width_slider').prop('value', window.artDimensionsWidth);
+
+        $('.artwork_height_slider').prop('min', 4); 
+        $('.artwork_height_slider').prop('max', 36);
+        $('.artwork_height_slider').prop('step', 0.125);
+        $('.artwork_height_slider').prop('value', window.artDimensionsHeight);
+
+        $('.artwork_width_slider, .artwork_height_slider').rangeslider('update', true);
+
+        $('.dimension_link').removeClass('active_dimensions_link');
+        $(this).addClass('active_dimensions_link');
+        $('.artwork_height_slider_value_integer').removeClass('cm_spacing_correction');
+      }
+    });
+
+    $('.artwork_width_slider').rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        window.artDimensionsWidth = window.dimensionUnitInteger === 1 ? value : convertToInchesRoundToNearestEighth(value);
+        changeFrameItLink(window.artDimensionsWidth, window.artDimensionsHeight);
+
+        $('.artwork_width_slider_value_integer').html(Math.floor(value));
+
+        if (Ratio.guessType(value) == 'decimal') {
+          $('.fraction_width_arrows').css({ 'display': 'inline-block'});
+          widthRemainder = Ratio.parse((value - Math.floor(value))).simplify();
+          $('.artwork_width_slider_value_fraction').html(widthRemainder.toLocaleString());
+        } else {
+          $('.artwork_width_slider_value_fraction').html('');
+          $('.fraction_width_arrows').hide();
+        }
+
+        if (Math.floor(value) >= window.maxValue) {
+          widthOversizeTooltipShowing = true;
+          $('.artwork_width_slider_value_integer').tooltipster('show');
+          $('.artwork_width_slider_value_integer').tooltipster('content', $('<div class="dimension_warnings">' + tooltipOversizeContent + '</div>'));
+          setTimeout(function() { $('.artwork_width_slider_value_integer').tooltipster('hide') }, 9000);
+        } else {
+          if (widthOversizeTooltipShowing === true) {
+            $('.artwork_width_slider_value_integer').tooltipster('hide');
+            widthOversizeTooltipShowing = false;
+          }
+        }
+        $('.width_decimal_text').html(window.artDimensionsWidth);
+      },
+    });
+
+    $('.artwork_height_slider').rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        window.artDimensionsHeight = window.dimensionUnitInteger === 1 ? value : convertToInchesRoundToNearestEighth(value);
+
+        changeFrameItLink(window.artDimensionsWidth, window.artDimensionsHeight);
+
+        $('.artwork_height_slider_value_integer').html(Math.floor(value));
+
+        if (Ratio.guessType(value) == 'decimal') {
+          $('.fraction_height_arrows').css({ 'display': 'inline-block'});
+          heightRemainder = Ratio.parse((value - Math.floor(value))).simplify();
+          $('.artwork_height_slider_value_fraction').html(heightRemainder.toLocaleString());
+        } else {
+          $('.artwork_height_slider_value_fraction').html('');
+          $('.fraction_height_arrows').hide();
+        }
+
+        if (Math.floor(value) >= window.maxValue) {
+          heightOversizeTooltipShowing = true;
+          $('.artwork_height_slider_value_integer').tooltipster('show');
+          $('.artwork_height_slider_value_integer').tooltipster('content', $('<div class="dimension_warnings">' + tooltipOversizeContent + '</div>'));
+          setTimeout(function() { $('.artwork_height_slider_value_integer').tooltipster('hide') }, 9000);
+        } else {
+          if (heightOversizeTooltipShowing === true) {
+            $('.artwork_height_slider_value_integer').tooltipster('hide');
+            heightOversizeTooltipShowing = false;
+          }
+        }
+        $('.height_decimal_text').html(window.artDimensionsHeight);
+      },
+    });
+
+    $('.measuring_tips_link').click(function(e) {
+      e.preventDefault();
+      $('.measuring_tips').velocity("scroll", { duration: 1000 });
+    });
+
+    $('.see_how_it_works_link').click(function(e) {
+      e.preventDefault();
+      $('.how_to_frame_video_wrapper').velocity("scroll", { duration: 1000 });
+    })
+  });
+</script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>About us - Nirathisayam</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/landing.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+    #imgInp {
+  padding: 10px;
+  background-color: #d3d3d3;
+}
+#blah {
+  height: 320px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+    </style>
+    <body>
+
+        <div id="config" class="container">
+                <div class="row">
+                        <div class="col s6">
+                                <form id="form1" runat="server">
+                                  <div   id='img_contain' class="frames">
+                                    <img id="blah" data-frame-type="wood6" src="http://lorempixel.com/200/250/nature/" alt="" />     
+                                  </div>
+                                    </form>
+
+                        </div>
+                        <div class="col s6"><input type='file' id="imgInp" /></div>
+                      </div>
+        </div>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script type="text/javascript" src="js/materialize.min.js"></script>
+            <script>
+            function readURL(input) {
+
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('#blah').attr('src', e.target.result);
+
+    $('#blah').hide();
+    $('#blah').fadeIn(650);
+  }
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#imgInp").change(function() {
+readURL(this);
+});
+            </script>
+    </body>
+    </html>

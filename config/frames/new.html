@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+  <title>Custom Picture Frames Online - Nirathisayam</title>
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" media="all" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <script src="../config.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css">
+
+  <!-- data layer var needs to be declared above :google_data_layer and the google_tag_manager snippet. Google_data_layer needs to be above the snippet as well. Vars pushed on the pageview initiatialization -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body class="">
+  
+
+
+  <div class="ns_page_body_wrapper">
+    
+
+<header class="nav_and_drawer_wrapper">
+  <div class="top_nav_wrapper">
+
+    <nav class="regular-nav nav white_background_nav" role="navigation"  >
+      <ul class="u-pull-left list-horizontal">
+        <li>
+          <a href="../../index.html" title="Level Frames - Custom Picture Frames Online">
+            <img alt="Custom Picture Frames Online - Nirathisayam" style="height:33px; " src="../../img/test-2.png" />
+          </a>
+        </li>
+        <li class="responsive_priority_4"><i class="fa fa-chevron-left "></i>  <a class= data-intro='Hello step one!'>Print dimensions: <strong class='frame_options_art_width_text'></strong>" x <strong class='frame_options_art_height_text'></strong>" </a>
+        </li>
+      </ul>
+
+      <ul class="u-pull-right list-horizontal">
+        
+        <li class="menu_link_inline_new_tag">
+          <div class="m-top-swatchs profile_swatches">
+            <a href="#" data-frame-color-id="6" class="profile_swatch_link profile_id_6 regular_tooltip" title="Black">
+              <img src="../swatches/black-maple2-swatch.jpg" alt="swatch" />
+            </a>
+            <a href="#" data-frame-color-id="2" class="profile_swatch_link profile_id_2 regular_tooltip" title="White">
+              <img src="../swatches/white-maple4-swatch.jpg" alt="swatch" />
+            </a>
+           
+            <a href="#" data-frame-color-id="5" class="profile_swatch_link profile_id_5 regular_tooltip" title="Brown">
+              <img src="../swatches/natural-walnut2-swatch.jpg" alt="swatch" />
+            </a>
+          </div>
+        </li>
+
+        <li class="responsive_priority_2 "><a href="#" class="btn  open-glaze-modal"><strong><span style="color:green;" class="frame_options_total_price_text"></span></strong> &nbsp;-&nbsp; Finalize</a></li>
+
+        
+
+        <li class="responsive_mobile_icon"><a href="#" class="dropdown_nav_link" data-category="mobile"><i class="fa fa-navicon"></i></a></li>
+      </ul>
+
+      <div class="u-cf"></div>
+    </nav>
+  </div>
+
+  
+</header>
+
+<div class="new_frame_editor_wrapper" style="position:relative; height:100%">
+  <div class="columns" style="border-bottom:1px solid #eee; padding-top:0; margin-top:0;">
+    <div class="column frame_editor_wall_bg" style="padding:0px;">
+      <div class="frame_and_drawer_column">       
+        <div class="frame_and_arrows_container">
+          
+<div class="box_container box_container_10">
+  <div class="align_center">
+    <div class="gyroscope_loader gyroscope_loader--rings frame_loader_10_1"></div>
+  </div>
+  <div>
+
+  </div>
+  <div class="three_d_box_container three_d_box_container_10_1 panels-backface-invisible">
+    <figure class="three_dimensional_frame three_dimensional_frame_10_1 front">
+      <div class="overlay_gradient overlay_gradient_10_1"></div>
+    </figure>
+    <figure class="front_mount three_d_face"></figure>
+    <figure class="right three_d_face"></figure>
+    <figure class="left three_d_face"></figure>
+    <figure class="back three_d_face">
+      <div class="back_frame_shadows"></div>
+    </figure>
+    <figure class="top three_d_face"></figure>
+    <figure class="bottom three_d_face"></figure>
+    <figure class="top_inner three_d_face"></figure>
+    <figure class="right_inner three_d_face"></figure>
+    <figure class="bottom_inner three_d_face"></figure>
+    <figure class="left_inner three_d_face"></figure>
+
+    <!-- only show when frame rotation at 0 degrees. Hide back frame shadows. Because otherwise on small 5x5 frame, the frame depth is so large that the back frame shadows don't show at all. Need to attach to the front -->
+    <div class="front_frame_shadows"></div>
+  </div>
+</div>
+
+<script>
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+$(document).ready(function() {
+  var frameArgs = {
+    artWidth: JSON.parse(getUrlVars()["width"]),
+    artHeight: JSON.parse(getUrlVars()["height"]),
+    frameWidthId: 5,
+    profileId: 6,
+    matWidthId: 4,
+    matColorId: 1,
+    glazeId: 1,
+    i: 10,
+    x: 1,
+    customMat: false,
+  };
+
+    frameArgs.imagePath = '';
+    frameArgs.printPrice = 0;
+    frameArgs.printingInHouse = 1;
+
+
+  window.nsFrame_10_1 = new NSFrameEditor(frameArgs);
+
+  window.nsFrame_10_1.render3DOptions();
+
+
+  //allows for smooth transitions when cycling through the frame profiles.
+    $("<img />").attr("src","../img/black-frame-face17.jpg");
+    $("<img />").attr("src","../img/black-vector-side9.jpg");
+    $("<img />").attr("src","../img/white-frame-vector2.jpg");
+    $("<img />").attr("src","../img/white-vector-side.jpg");
+    $("<img />").attr("src","../img/natural-frame-face.jpg");
+    $("<img />").attr("src","../img/natural-maple-side2.jpg");
+    $("<img />").attr("src","../img/natural-walnut-face2-darker.jpg");
+    
+});
+</script>
+
+        </div>
+
+        
+      </div>     
+    </div>
+
+    <div class="column is-5 white_sidebar_bg">
+      <div class="white_sidebar_padding">
+        <h2 class="frame_profile_title frame_options_profile_text m-top-10">Black</h2>
+        <p class="frame_editor_summary frame_options_profile_description"></p>
+
+        <div class="m-top-20">
+          <p class="frame_editor_summary golden_ratio_button_area">
+              <a href="#" class="btn frame_control_btn user_art_link regular_tooltip tooltipstered" title="upload image">
+                <i class="fa fa-upload"></i> Add Image </a>
+                <!-- <a href="#" class="btn frame_control_btn user_art_link regular_tooltip tooltipstered"><i class="fa fa-cloud-upload"></i> Preview Image</a>
+            <a href="#" class="btn frame_control_btn share_frame_link_popup regular_tooltip" title="Share this frame choice with a friend" rel="nofollow" style="padding-top:10px"><i class="fa fa-comments-o"></i>  Get Feedback</a>  -->
+            <!-- <button is='google-cast-button'></button>  -->
+          </p>
+         
+        </div>
+      
+        <div class="m-top-30">
+          <span class="white_sidebar_section_label">
+            Face
+          </span>
+      
+          <div class="m-top-10 profile_swatches">
+              <select name="frame_width_editor_select" id="frame_width_editor_select" class="frame_width_editor_select">
+                </select>    
+               
+           
+          </div>
+        </div>
+        <div class="columns is-centered m-top-40">
+          <div class="column m-bottom-15">
+            <input class="artwork_width_slider" type="range" min="4" max="36" step=".125" value="10.5" data-orientation="horizontal" />
+            <div class="m-top-20">
+              <span class="dimension_label" style="color:green;">Width</span>
+              <span class="decimal_label">( <span class="width_decimal_text">10.5</span>" )</span>
+            </div>
+          </div>
+          <div class="column purple_slider_fill m-bottom-15">
+            <input class="artwork_height_slider" type="range" min="4" max="36" step=".125" value="12" data-orientation="horizontal" />
+            <div class="m-top-20">
+              <span class="dimension_label" style="color:#c78a39">Height</span>
+              <span class="decimal_label">( <span class="height_decimal_text">12</span>" )</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="m-top-30">
+          <span class="white_sidebar_section_label matting_label">
+            Matting
+          </span>
+      
+          <div class="m-top-10">
+            <span class="generate_mat_width_controls" style="vertical-align:top"></span>
+
+            <div class="mat_swatch_controls_wrapper">
+              <div class="mat_color_swatches generate_mat_color_controls"></div>
+            </div>      
+          </div>
+        </div>
+    
+          <div class="m-top-15">
+          </div>
+
+      
+        <div class="m-top-20 below_finalize_text">
+          <p class="frame_editor_summary">
+            Your frame is:
+            <span class="editor_bold_selection frame_options_exterior_width_text">34</span> x
+            <span class="editor_bold_selection frame_options_exterior_height_text">24</span> .
+            
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--chrome-->
+<script src="../../rangeslider.min.js"></script>
+<script>
+  $(document).ready(function() {
+    //starting values
+    window.artDimensionsWidth = 10.5;
+    window.artDimensionsHeight = 12;
+    window.dimensionUnits = "\"";
+    window.dimensionUnitInteger = 1; // 1 = inches. 2 = cm
+    window.maxValue = 36;
+    var widthRemainder;
+    var heightRemainder;
+    var tooltipOversizeContent = 'Artwork bigger than this requires a custom quote. Please <a class="typeform-share link" href="/projects/new" data-mode="1">complete this form</a>.';
+    var heightOversizeTooltipShowing = false;
+    var widthOversizeTooltipShowing = false;
+
+    $('.artwork_height_slider_value_integer, .artwork_width_slider_value_integer').tooltipster({
+      position: 'top',
+      trigger: 'custom',
+      content: '',
+      interactive: true
+    });
+
+    function changeFrameItLink(x, y) {
+      x = x < 4 ? 4 : x;
+      y = y < 4 ? 4 : y;
+
+      $('.get_started_slider_frame_it_btn').attr('href', 'frames/new.html?width=' + x + '&height=' + y);
+    }
+
+    function convertToInchesRoundToNearestEighth(val) {
+      result =  parseFloat((Math.round((val / 2.54)*8)/8).toFixed(3));
+      return result;
+    }
+
+    $('.fraction_arrows a').click(function(e) {
+      var dimension = $(this).data('dimension') === 'x' ? window.artDimensionsWidth : window.artDimensionsHeight;
+      var dimensionClass = $(this).data('dimension') === 'x' ? '.artwork_width_slider' : '.artwork_height_slider';
+
+      var val = $(this).data('value') === 'up' ? dimension + 0.125 : dimension - 0.125;
+      $(dimensionClass).val(val).change();
+    });
+
+    $('.convert_to_cm_link').click(function(e) {
+      e.preventDefault;
+      if (window.dimensionUnitInteger !== 2) {
+        window.maxValue = 91;
+        window.dimensionUnits = " cm";
+        window.dimensionUnitInteger = 2;
+        var widthValInCentimeters = Math.round(window.artDimensionsWidth * 2.54);
+        var heightValInCentimeters = Math.round(window.artDimensionsHeight * 2.54);
+        $('.artwork_width_slider').prop('min', 10); 
+        $('.artwork_width_slider').prop('max', 91);
+        $('.artwork_width_slider').prop('step', 1);
+        $('.artwork_width_slider').prop('value', widthValInCentimeters);
+
+        $('.artwork_height_slider').prop('min', 10); 
+        $('.artwork_height_slider').prop('max', 91);
+        $('.artwork_height_slider').prop('step', 1);
+        $('.artwork_height_slider').prop('value', heightValInCentimeters);
+
+        $('.artwork_width_slider, .artwork_height_slider').rangeslider('update', true);
+
+        $('.dimension_link').removeClass('active_dimensions_link');
+        $(this).addClass('active_dimensions_link');
+        $('.artwork_height_slider_value_integer').addClass('cm_spacing_correction');
+      }
+    });
+
+    $('.convert_to_inch_link').click(function(e) {
+      e.preventDefault;
+      if (window.dimensionUnitInteger !== 1) {
+        window.maxValue = 36;
+        window.dimensionUnits = "\"";
+        window.dimensionUnitInteger = 1;
+        $('.artwork_width_slider').prop('min', 4); 
+        $('.artwork_width_slider').prop('max', 36);
+        $('.artwork_width_slider').prop('step', 0.125);
+        $('.artwork_width_slider').prop('value', window.artDimensionsWidth);
+
+        $('.artwork_height_slider').prop('min', 4); 
+        $('.artwork_height_slider').prop('max', 36);
+        $('.artwork_height_slider').prop('step', 0.125);
+        $('.artwork_height_slider').prop('value', window.artDimensionsHeight);
+
+        $('.artwork_width_slider, .artwork_height_slider').rangeslider('update', true);
+
+        $('.dimension_link').removeClass('active_dimensions_link');
+        $(this).addClass('active_dimensions_link');
+        $('.artwork_height_slider_value_integer').removeClass('cm_spacing_correction');
+      }
+    });
+
+    $('.artwork_width_slider').rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        window.artDimensionsWidth = window.dimensionUnitInteger === 1 ? value : convertToInchesRoundToNearestEighth(value);
+        changeFrameItLink(window.artDimensionsWidth, window.artDimensionsHeight);
+
+        $('.artwork_width_slider_value_integer').html(Math.floor(value));
+
+        if (Ratio.guessType(value) == 'decimal') {
+          $('.fraction_width_arrows').css({ 'display': 'inline-block'});
+          widthRemainder = Ratio.parse((value - Math.floor(value))).simplify();
+          $('.artwork_width_slider_value_fraction').html(widthRemainder.toLocaleString());
+        } else {
+          $('.artwork_width_slider_value_fraction').html('');
+          $('.fraction_width_arrows').hide();
+        }
+
+        if (Math.floor(value) >= window.maxValue) {
+          widthOversizeTooltipShowing = true;
+          $('.artwork_width_slider_value_integer').tooltipster('show');
+          $('.artwork_width_slider_value_integer').tooltipster('content', $('<div class="dimension_warnings">' + tooltipOversizeContent + '</div>'));
+          setTimeout(function() { $('.artwork_width_slider_value_integer').tooltipster('hide') }, 9000);
+        } else {
+          if (widthOversizeTooltipShowing === true) {
+            $('.artwork_width_slider_value_integer').tooltipster('hide');
+            widthOversizeTooltipShowing = false;
+          }
+        }
+        $('.width_decimal_text').html(window.artDimensionsWidth);
+      },
+    });
+
+    $('.artwork_height_slider').rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        window.artDimensionsHeight = window.dimensionUnitInteger === 1 ? value : convertToInchesRoundToNearestEighth(value);
+
+        changeFrameItLink(window.artDimensionsWidth, window.artDimensionsHeight);
+
+        $('.artwork_height_slider_value_integer').html(Math.floor(value));
+
+        if (Ratio.guessType(value) == 'decimal') {
+          $('.fraction_height_arrows').css({ 'display': 'inline-block'});
+          heightRemainder = Ratio.parse((value - Math.floor(value))).simplify();
+          $('.artwork_height_slider_value_fraction').html(heightRemainder.toLocaleString());
+        } else {
+          $('.artwork_height_slider_value_fraction').html('');
+          $('.fraction_height_arrows').hide();
+        }
+
+        if (Math.floor(value) >= window.maxValue) {
+          heightOversizeTooltipShowing = true;
+          $('.artwork_height_slider_value_integer').tooltipster('show');
+          $('.artwork_height_slider_value_integer').tooltipster('content', $('<div class="dimension_warnings">' + tooltipOversizeContent + '</div>'));
+          setTimeout(function() { $('.artwork_height_slider_value_integer').tooltipster('hide') }, 9000);
+        } else {
+          if (heightOversizeTooltipShowing === true) {
+            $('.artwork_height_slider_value_integer').tooltipster('hide');
+            heightOversizeTooltipShowing = false;
+          }
+        }
+        $('.height_decimal_text').html(window.artDimensionsHeight);
+      },
+    });
+
+    $('.measuring_tips_link').click(function(e) {
+      e.preventDefault();
+      $('.measuring_tips').velocity("scroll", { duration: 1000 });
+    });
+
+    $('.see_how_it_works_link').click(function(e) {
+      e.preventDefault();
+      $('.how_to_frame_video_wrapper').velocity("scroll", { duration: 1000 });
+    })
+  });
+</script>
+<script>
+window.__onGCastApiAvailable = function(isAvailable){
+    if(! isAvailable){
+        return false;
+    }
+
+    var castContext = cast.framework.CastContext.getInstance();
+
+    castContext.setOptions({
+        autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
+        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID
+    });
+
+    var stateChanged = cast.framework.CastContextEventType.CAST_STATE_CHANGED;
+    castContext.addEventListener(stateChanged, function(event){
+        var castSession = castContext.getCurrentSession();
+        var media = new chrome.cast.media.MediaInfo('https://www.example.com/my-song.mp3', 'audio/mp3');
+        var request = new chrome.cast.media.LoadRequest(media);
+
+        castSession && castSession
+            .loadMedia(request)
+            .then(function(){
+                console.log('Success');
+            })
+            .catch(function(error){
+                console.log('Error: ' + error);
+            });
+    });
+};
+</script>
+
+
+<div style="clear:both"></div>
+
+
+
+<div id="glaze_popup" class="big_get_started_popup mfp-with-anim mfp-hide glaze_table_popup">
+  <h2>Please Select a Glaze</h2>
+
+  <p>Glazing materials, typically glass or acrylic, protect framed art from dust and damage.</p>
+
+  <table class="table is-bordered glaze_table m-top-10">
+      <tbody>
+        <tr class="selected_glaze_row" data-glaze-name="Standard" data-value="1">
+          <td><span class="glaze_td_checkmark"><i class="fa fa-check"></i></span></td>
+          <td class="glaze_popup_title">
+            Standard<br/>
+            <div class="glaze_popup_description"><p>An optically pure, framers grade acrylic. A fine choice for most photos, posters and prints provided you avoid hanging in direct sunlight.</p></div>
+            <span class="glaze_price_1"></span>
+          </td>
+          <td class="glaze_popup_image"><img src="../img/glaze_standard.jpg" alt="Glaze standard" /></td>
+        </tr>
+        <tr  data-glaze-name="UV Protection" data-value="2">
+          <td><span class="glaze_td_checkmark"><i class="fa fa-check"></i></span></td>
+          <td class="glaze_popup_title">
+            UV Protection<br/>
+            <div class="glaze_popup_description"><p>Provides the highest level of protection against damaging Ultraviolet (UV) rays, preventing fading or yellowing of paper-based artwork.</p></div>
+            <span class="glaze_price_2"></span>
+          </td>
+          <td class="glaze_popup_image"><img src="../img/glaze_uv.jpg" alt="Glaze uv" /></td>
+        </tr>
+        <tr  data-glaze-name="Non-Glare" data-value="4">
+          <td><span class="glaze_td_checkmark"><i class="fa fa-check"></i></span></td>
+          <td class="glaze_popup_title">
+            Non-Glare<br/>
+            <div class="glaze_popup_description"><p>Has a subtle matte finish that cuts down on reflections from surrounding light and blocks out 99% of UV rays. Ideal for unhindered viewing of artwork.</p></div>
+            <span class="glaze_price_4"></span>
+          </td>
+          <td class="glaze_popup_image"><img src="../img/glaze_non_glare.jpg" alt="Glaze non glare" /></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <div class="row m-top-20">
+    <a href="#" class="add_frame_options_to_cart main_function_btn btn green_huge_btn"><span class="frame_options_total_price_text"></span> &nbsp;-&nbsp; Add To Cart</a>
+  </div>
+</div>
+
+
+
+<div id="user_image_upload" class="user_image_upload_popup mfp-with-anim mfp-hide">
+<!--   
+  <p><a href="#" class="remove_user_image" class="remove_user_image"><i class="fa fa-minus-circle"></i> Exit & Remove Preview Image</a></p> -->
+  <iframe frameborder="0" id="filepicker_area"></iframe>
+</div> 
+
+
+<script>
+  var optionsData = JSON.parse('{"constants":{"paperPricePerSquareInch":0.07,"matPricePerSquareInch":0.0225},"frameWidths":{"options":[{"frameWidthId":5,"frameWidth":0.75,"framePricePerLinearInch":0.42},{"frameWidthId":6,"frameWidth":1,"framePricePerLinearInch":0.49},{"frameWidthId":2,"frameWidth":1.25,"framePricePerLinearInch":0.49},{"frameWidthId":7,"frameWidth":1.5,"framePricePerLinearInch":0.49},{"frameWidthId":8,"frameWidth":1.625,"framePricePerLinearInch":0.45}],"optionsDataIndex":{"0.75":0,"1":1,"1.25":2,"1.5":3,"1.625":4},"optionsIdIndex":{"5":0,"6":1,"2":2,"7":3,"8":4},"totalItems":5,"cyclePosition":0},"frameProfiles":{"options":[{"profileId":6,"profile":"Black","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"black","frameWidthsAvailable":[0.75,1,1.25],"frameWidthPrices":{"0.75":"0.42","1":"0.5","1.25":"0.54"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.25":"0.125"},"faceImage":"../img/black-frame-face17.jpg","sideImage":"../img/black-vector-side9.jpg","maxBorderImageSlice":85,"horizontalSideImage":"../img/black-frame-horizontal-side.jpg","profileDescription":"Hard to go wrong with this versatile and timeless profile. Pairs well with almost any artwork or photograph.","frameColorImages":[{"thumb":"../img/corner_shots/black-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/black-corner-large.jpg"},{"thumb":"../img/black-maple-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/black-maple-side-large.jpg"},{"thumb":"../img/corner_shots/gallery/black-maple-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/black-maple-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":2,"profile":"White","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"white","frameWidthsAvailable":[0.75,1,1.25],"frameWidthPrices":{"0.75":"0.42","1":"0.5","1.25":"0.54"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.25":"0.125"},"faceImage":"../img/white-frame-vector2.jpg","sideImage":"../img/white-vector-side.jpg","maxBorderImageSlice":135,"horizontalSideImage":"../img/white-frame-side3.jpg","profileDescription":"Another classic found in many homes. Recommended for a contemporary look or to enhance vibrant colors.","frameColorImages":[{"thumb":"../img/corner_shots/white-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/white-corner-large.jpg"},{"thumb":"../img/corner_shots/gallery/white-maple-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/white-maple-side-large.jpg"},{"thumb":"../img/corner_shots/gallery/white-maple-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/white-maple-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":3,"profile":"Natural Maple","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"maple","frameWidthsAvailable":[0.75,1,1.5],"frameWidthPrices":{"0.75":"0.42","1":"0.8","1.5":"1.0"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.5":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.5":"0.125"},"faceImage":"../img/natural-frame-face.jpg","sideImage":"../img/natural-maple-side2.jpg","maxBorderImageSlice":38,"horizontalSideImage":"../img/natural-maple-horizontal.jpg","profileDescription":"This blonde shade of maple with natural grain is a perfect choice for adding a pop of color that is still soft on the eyes.","frameColorImages":[{"thumb":"../img/corner_shots/maple-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/maple-corner-large.jpg"},{"thumb":"../img/corner_shots/gallery/natural-maple-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-maple-side-large.jpg"},{"thumb":"../img/corner_shots/gallery/natural-maple-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-maple-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":5,"profile":"Brown","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"walnut","frameWidthsAvailable":[0.75,1,1.5],"frameWidthPrices":{"0.75":"0.42","1":"0.8","1.5":"1.0"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.5":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.5":"0.125"},"faceImage":"../img/natural-walnut-face2-darker.jpg","sideImage":"../img/walnut-darker-side2.jpg","maxBorderImageSlice":76,"horizontalSideImage":"../img/walnut-horizontal.jpg","profileDescription":"A darker, richer wood tone that is versatile enough for a range of decor styles, from modern to bohemian.","frameColorImages":[{"thumb":"../img/corner_shots/gallery/gallery-walnut-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/gallery-walnut-corner-large.jpg"},{"thumb":"../img/corner_shots/gallery/natural-walnut-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-walnut-side-large.jpg"},{"thumb":"../img/corner_shots/gallery/natural-walnut-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-walnut-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":7,"profile":"Weathered Black","frameColorPrice":37.0,"frameCollectionId":"2","swatchName":"","frameWidthsAvailable":[0.75,1.625],"frameWidthPrices":{"0.75":"0.55","1.625":"0.64"},"frameWidthDepths":{"0.75":"1.125","1.625":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.625":"0.25"},"faceImage":"../img/lancaster-dark-face.jpg","sideImage":"../img/lancaster-dark-side2.jpg","maxBorderImageSlice":90,"horizontalSideImage":"../img/lancaster-dark-horizontal.jpg","profileDescription":"Dark, midnight hues wash over but do not fully hide the wood grain in this rougher take on a modern black frame.","frameColorImages":[{"thumb":"../img/corner_shots/rustic/weathered-black-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-corner-large.jpg"},{"thumb":"../img/corner_shots/rustic/weathered-black-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-side-large.jpg"},{"thumb":"../img/corner_shots/rustic/weathered-black-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":8,"profile":"Weathered Grey","frameColorPrice":37.0,"frameCollectionId":"2","swatchName":"","frameWidthsAvailable":[0.75,1.625],"frameWidthPrices":{"0.75":"0.55","1.625":"0.64"},"frameWidthDepths":{"0.75":"1.125","1.625":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.625":"0.25"},"faceImage":"../img/weathered-grey-face.jpg","sideImage":"../img/weathered-grey-improved2.jpg","maxBorderImageSlice":90,"horizontalSideImage":"../img/weathered-grey-side-horizontal1.jpg","profileDescription":"The texture and faded grey finish evoke an old barn aesthetic, while the slimmer shape of this profile adds a modern twist.","frameColorImages":[{"thumb":"../img/corner_shots/rustic/weathered-grey-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-corner-large.jpg"},{"thumb":"../img/corner_shots/rustic/weathered-grey-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-side-large.jpg"},{"thumb":"../img/corner_shots/rustic/weathered-grey-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":9,"profile":"Weathered Natural","frameColorPrice":37.0,"frameCollectionId":"2","swatchName":"","frameWidthsAvailable":[0.75,1.625],"frameWidthPrices":{"0.75":"0.55","1.625":"0.64"},"frameWidthDepths":{"0.75":"1.125","1.625":"0.75"},"frameWidthRabbetDepths":{"0.75":"0.125","1.625":"0.25"},"faceImage":"../img/weathered-natural-face.jpg","sideImage":"../img/weathered-natural-side-large3.jpg","maxBorderImageSlice":82,"horizontalSideImage":"../img/driftwood-side-horizontal.jpg","profileDescription":"The sandy color and wide lines of the grain in this profile bring to mind a beach house or remote cabin feel.","frameColorImages":[{"thumb":"../img/corner_shots/rustic/weathered-natural-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-corner-large.jpg"},{"thumb":"../img/corner_shots/rustic/weathered-natural-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-side-large.jpg"},{"thumb":"../img/corner_shots/rustic/weathered-natural-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":10,"profile":"Academie Black","frameColorPrice":37.0,"frameCollectionId":"3","swatchName":"","frameWidthsAvailable":[0.75,1.25],"frameWidthPrices":{"0.75":"0.55","1.25":"0.64"},"frameWidthDepths":{"0.75":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.25":"0.25"},"faceImage":"../img/academie-face.jpg","sideImage":"../img/matte-black-side3.jpg","maxBorderImageSlice":108,"horizontalSideImage":"../img/black-frame-horizontal-side.jpg","profileDescription":"The gold trim creates a lavish contrast to the darker base, creating a dressed up version of our Gallery Black profile.","frameColorImages":[{"thumb":"../img/corner_shots/classic/academie-black-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-corner-large.jpg"},{"thumb":"../img/corner_shots/classic/academie-black-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-side-large.jpg"},{"thumb":"../img/corner_shots/classic/academie-black-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":12,"profile":"Academie Gold","frameColorPrice":37.0,"frameCollectionId":"3","swatchName":"","frameWidthsAvailable":[0.75,1.25],"frameWidthPrices":{"0.75":"0.55","1.25":"0.64"},"frameWidthDepths":{"0.75":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.25":"0.25"},"faceImage":"../img/academie-gold.jpg","sideImage":"../img/academie-gold-side-xlarge.jpg","maxBorderImageSlice":120,"horizontalSideImage":"../img/academie-gold-horizontal.jpg","profileDescription":"A vintage profile that will stand out in any space with its elegant contours, gold finish and subtle flecks.","frameColorImages":[{"thumb":"../img/corner_shots/classic/academie-gold-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-corner-large.jpg"},{"thumb":"../img/corner_shots/classic/academie-gold-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-side-large.jpg"},{"thumb":"../img/corner_shots/classic/academie-gold-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":11,"profile":"Academie Silver","frameColorPrice":37.0,"frameCollectionId":"3","swatchName":"","frameWidthsAvailable":[0.75,1.25],"frameWidthPrices":{"0.75":"0.55","1.25":"0.64"},"frameWidthDepths":{"0.75":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.25":"0.25"},"faceImage":"../img/academie-yellow.jpg","sideImage":"../img/academie-silver-side-large3.jpg","maxBorderImageSlice":105,"horizontalSideImage":"../img/academie-yellow-horizontal.jpg","profileDescription":"A silver, champagne profile perfect for classing up extra special artwork and moments caught on camera.","frameColorImages":[{"thumb":"../img/corner_shots/classic/academie-silver-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-corner-large.jpg"},{"thumb":"../img/corner_shots/classic/academie-silver-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-side-large.jpg"},{"thumb":"../img/corner_shots/classic/academie-silver-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":13,"profile":"Cloud Gray","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../img/cloud-gray-face5.jpg","sideImage":"../img/cloud-gray-side5.jpg","maxBorderImageSlice":80,"horizontalSideImage":"../img/cloud-gray-side5.jpg","profileDescription":"","frameColorImages":[{"thumb":"../img/corner_shots/tabletop/table-cloudgray-side-thumb2.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-side-large2.jpg"},{"thumb":"../img/corner_shots/tabletop/table-cloudgray-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-shelf-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-cloudgray-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":14,"profile":"Slate Black","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../img/midnight-black-face2.jpg","sideImage":"../img/midnight-black-side3.jpg","maxBorderImageSlice":135,"horizontalSideImage":"../img/midnight-black-side3.jpg","profileDescription":"","frameColorImages":[{"thumb":"../img/corner_shots/tabletop/table-slateblack-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-side-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-slateblack-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-shelf-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-slateblack-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":15,"profile":"Sandstone","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../img/sandstone-face.jpg","sideImage":"../img/sandstone-side2.jpg","maxBorderImageSlice":106,"horizontalSideImage":"../img/sandstone-side2.jpg","profileDescription":"","frameColorImages":[{"thumb":"../img/corner_shots/tabletop/table-sandstone-side-thumb2.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-side-large3.jpg"},{"thumb":"../img/corner_shots/tabletop/table-sandstone-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-shelf-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-sandstone-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":16,"profile":"Hazelnut","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../img/milk-chocolate-face5.jpg","sideImage":"../img/hazelnut-side.jpg","maxBorderImageSlice":100,"horizontalSideImage":"../img/hazelnut-side.jpg","profileDescription":"","frameColorImages":[{"thumb":"../img/corner_shots/tabletop/table-hazelnut-side-thumb7.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-side-large7.jpg"},{"thumb":"../img/corner_shots/tabletop/table-hazelnut-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-shelf-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-hazelnut-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":17,"profile":"Espresso","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../img/espresso-face.jpg","sideImage":"../img/espresso-side.jpg","maxBorderImageSlice":100,"horizontalSideImage":"../img/espresso-side.jpg","profileDescription":".","frameColorImages":[{"thumb":"../img/corner_shots/tabletop/table-espresso-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-side-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-espresso-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-shelf-large.jpg"},{"thumb":"../img/corner_shots/tabletop/table-espresso-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-corner-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":true}],"optionsDataIndex":{"Black":0,"White":1,"Natural Maple":2,"Brown":3,"Weathered Black":4,"Weathered Grey":5,"Weathered Natural":6,"Academie Black":7,"Academie Gold":8,"Academie Silver":9,"Cloud Gray":10,"Slate Black":11,"Sandstone":12,"Hazelnut":13,"Espresso":14},"optionsIdIndex":{"6":0,"2":1,"3":2,"5":3,"7":4,"8":5,"9":6,"10":7,"12":8,"11":9,"13":10,"14":11,"15":12,"16":13,"17":14},"totalItems":15,"cyclePosition":0},"matWidths":{"options":[{"matWidthId":4,"matWidth":0},{"matWidthId":1,"matWidth":1},{"matWidthId":46,"matWidth":1.25},{"matWidthId":7,"matWidth":1.5},{"matWidthId":2,"matWidth":2},{"matWidthId":8,"matWidth":2.5},{"matWidthId":3,"matWidth":3},{"matWidthId":9,"matWidth":3.5},{"matWidthId":12,"matWidth":4}],"optionsDataIndex":{"0":0,"1":1,"1.25":2,"1.5":3,"2":4,"2.5":5,"3":6,"3.5":7,"4":8},"optionsIdIndex":{"4":0,"1":1,"46":2,"7":3,"2":4,"8":5,"3":6,"9":7,"12":8},"totalItems":8,"cyclePosition":0,"regularEditorOptions":[{"matWidthId":4,"matWidth":0},{"matWidthId":1,"matWidth":1},{"matWidthId":7,"matWidth":1.5},{"matWidthId":2,"matWidth":2},{"matWidthId":8,"matWidth":2.5},{"matWidthId":3,"matWidth":3},{"matWidthId":9,"matWidth":3.5},{"matWidthId":12,"matWidth":4}]},"matColors":{"options":[{"matColorId":1,"matColor":"Off-White","matColorValue":"hsla(0, 0%, 100%, 1)","matInnerShadedBevelColor":"#d3c8c2","matInnerLitBevelColor":"#dedede"},{"matColorId":2,"matColor":"Black","matColorValue":"hsla(0, 0%, 13%, 1)","matInnerShadedBevelColor":"#333","matInnerLitBevelColor":"#333"}],"optionsDataIndex":{"Off-White":0,"Black":1},"optionsIdIndex":{"1":0,"2":1},"totalItems":2,"cyclePosition":0},"glazes":{"options":[{"glazeId":1,"glaze":"Standard","glazePricePerSquareInch":0.06},{"glazeId":2,"glaze":"UV Protection","glazePricePerSquareInch":0.08},{"glazeId":4,"glaze":"Non-Glare","glazePricePerSquareInch":0.08}],"optionsDataIndex":{"Standard":0,"UV Protection":1,"Non-Glare":2},"optionsIdIndex":{"1":0,"2":1,"4":2},"totalItems":3,"cyclePosition":0}}');
+
+  function triggerFB(e) {
+    e.preventDefault();
+    FB.ui({
+    method: 'share',
+    quote: "I just created this custom frame with @levelframes. What do you think? How would you frame it:",
+    mobile_iframe: true,
+    href: window.shareFrameLink,
+    }, function(response){});
+  }
+</script>
+<script>
+introJs(".frame_tour").start();
+</script>
+<script src='https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1'></script>
+  </div>
+
+</body>
+</html>

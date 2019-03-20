@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e94d2af57b","applicationID":"7114283","transactionName":"d1wMRUVcWApdSh4fXVpsB1VeR1sUF0xQB1RRRw1BaFZQD0xXQw==","queueTime":4,"applicationTime":149,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  <title>Tabletop picture frames - Level Frames</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="p:domain_verify" content="4140ada9dd71d7df0822e00a53131793"/>
+  <meta property="og:url" content="https://www.levelframes.com/frames/tabletop"/>
+  <meta property="og:site_name" content="Level Frames"/>
+  <meta property="og:title" content="Tabletop picture frames - Level Frames" />
+  <meta name="description" content="Beautiful tabletop picture frames for your home and office." />
+  <meta property="og:description" content="Beautiful tabletop picture frames for your home and office." />
+  <meta property="og:image" content="https://d29mtkonxnc5fw.cloudfront.net/site_assets/level-twitter-image.jpg" />
+  <meta property="og:image:secure_url" content="https://d29mtkonxnc5fw.cloudfront.net/site_assets/level-twitter-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@levelframes">
+  <meta name="twitter:title" content="Tabletop picture frames - Level Frames">
+  <meta name="twitter:description" content="Beautiful tabletop picture frames for your home and office.">
+  <meta name="twitter:image" content="https://d29mtkonxnc5fw.cloudfront.net/site_assets/level-twitter-image.jpg">
+
+  <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" media="all" href="../assets/application-9cfa9073c53d7966f87ccbcf50c5c55cfcae33508ddc2f07850e25d1dc46d053.css" />
+
+  <script src="../../cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+<script>
+  Raven.config('https://a488ba449c5d4c4e9cc7feb215e2889f@sentry.io/69034').install();
+</script>
+
+
+  <script src="../assets/application-c765c5fd02818bc182b755d72ddb39074b0d1e2f0b2c19b1e4109b329ae4c0a9.js"></script>
+
+  <!-- data layer var needs to be declared above :google_data_layer and the google_tag_manager snippet. Google_data_layer needs to be above the snippet as well. Vars pushed on the pageview initiatialization -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  
+
+  
+
+  <script src="../../use.typekit.net/nsc6yhr.js"></script>
+  <script>try{Typekit.load({ async: false });}catch(e){}</script>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ejkBdgRlR8Virytz1kMUvVB+5wZ2XHnI4tVgkVnNK0dYPJaNVxkab7xcZyc6P/VHXv3A1Z8LmaZpp8fwQp7Ckg==" />
+
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KX3FHMS');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Facebook Pixel Code -->
+    <!-- normal facebook matching pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','../../connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '795656660528981');
+    fbq('track', "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=795656660528981&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+  <!-- custom facebook pixel event insertions -->
+  
+  <!-- End Facebook Pixel Code -->
+
+
+  
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body class="">
+  
+
+
+  <div class="level_page_body_wrapper">
+    
+
+
+<header class="nav_and_drawer_wrapper">
+  <div class="top_nav_wrapper">
+
+    <nav class="regular-nav nav white_background_nav" role="navigation"  >
+      <ul class="u-pull-left list-horizontal">
+        <li>
+          <a href="../index.html" title="Level Frames - Custom Picture Frames Online">
+            <img alt="Custom Picture Frames Online - Level Frames" style="height:30px; width:49px;" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/levelframes-glossier2.svg" />
+          </a>
+        </li>
+        <li class="responsive_priority_4"><a href="../index.html" title="Custom Picture Frames Online - Level Frames">Level Frames</a></li>
+      </ul>
+
+      <ul class="u-pull-right list-horizontal">
+        <!--
+          responsive_priority_1 (collapses last on mobile devices)
+          responsive_priority_2
+          responsive_priority_3
+          responsive_priority_4 (collapses first on mobile devices)
+        -->
+        <li><a href="../guide.html"><span class="menu_link_inline_new_tag">Start Framing</span></a></li>
+
+        <li class="responsive_priority_1 dropdown_nav_li"><a href="#" class="dropdown_nav_link" data-category="all-products"><span>All Products</span></a></li>
+
+        <li class="responsive_priority_1  dropdown_nav_li"><a href="#" class="dropdown_nav_link" data-category="our-frames"><span>Our Frames</span></a></li>
+
+        <li class="responsive_priority_2 dropdown_nav_li"><a href="#" class="dropdown_nav_link" data-category="tips"><span>Gifts &amp; Advice</span></a></li>
+
+        
+
+        <li class="responsive_mobile_icon"><a href="#" class="dropdown_nav_link" data-category="mobile"><i class="fa fa-navicon"></i></a></li>
+      </ul>
+
+      <div class="u-cf"></div>
+    </nav>
+  </div>
+
+  <div class="nav_drawer" id="drawer_nav_top">
+    <div class="nav_drawer_wrapper">
+      <div class="nav_drawer_close"><i class="fa fa-close"></i></div>
+
+      <div class="mobile-drawer-content drawer-content">
+        <div class="columns text-only-drawer is-vcentered" style="margin-bottom:10px;">
+          <!-- <div class="column">
+            <a href="/guide">Start Framing</a>
+          </div> -->
+          <div class="column">
+            <a href="#" class="dropdown_nav_link" data-category="all-products">All Products</a>
+          </div>
+          <div class="column">
+            <a href="#" class="dropdown_nav_link" data-category="our-frames">Our Frames</a>
+          </div>
+          <div class="column">
+            <a href="#" class="dropdown_nav_link" data-category="tips">Gifts &amp; Advice</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <div class="mobile-all-products-drawer-content drawer-content">
+        <div class="mobile_all_product_block">
+          <a href="/guide/fetch_artwork_selection" title="Create a custom frame">
+            <img alt="custom picture frame" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-frame-final.jpg" />
+            <span>Custom Frames</span>
+          </a>
+        </div>
+        <div class="mobile_all_product_block">
+          <a href="/photos" title="frame a photo">
+            <img alt="Frame a picture online" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-dog-final.jpg" />
+            <span>Framed Pictures</span>
+          </a>
+        </div>
+        <div class="mobile_all_product_block">
+          <a href="/collages" title="Make a collage picture frame">
+            <img alt="Collage picture frames" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-collage-final.jpg" />
+            <span>Collage Frames</span>
+          </a>
+        </div>
+        <div class="mobile_all_product_block">
+          <a href="/vinyl" title="frame your favorite vinyl album">
+            <img alt="Framed vinyl albums" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-vinyl-final.jpg" />
+            <span>Framed Vinyl</span>
+          </a>
+        </div>
+        <div class="mobile_all_product_block">
+          <a href="/gifts" title="Custom framing gift ideas">
+            <img alt="Give the gift of custom online framing" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-gifts-final.jpg" />
+            <span>Gift Ideas</span>
+          </a>
+        </div>
+        <div class="mobile_all_product_block mobile_back_link p-top-10">
+          <a href="#" class="dropdown_nav_link" data-category="mobile"><span><i class="fa fa-arrow-left"></i> &nbsp;Main Menu</span></a>
+        </div>
+      </div> -->
+
+      <div class="all-products-drawer-content drawer-content">
+
+        <div class="mobile_all_products_wrapper">
+          <div class="mobile_all_product_block">
+            <a href="../guide/fetch_artwork_selection.html" title="Create a custom frame">
+              <img alt="custom picture frame" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-frame-final.jpg" />
+              <span>Custom Frames</span>
+            </a>
+          </div>
+          <div class="mobile_all_product_block">
+            <a href="../photos.html" title="frame a photo">
+              <img alt="Frame a picture online" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-dog-final.jpg" />
+              <span>Framed Pictures</span>
+            </a>
+          </div>
+          <div class="mobile_all_product_block">
+            <a href="../collage-picture-frames.html" title="Make a collage picture frame">
+              <img alt="Collage picture frames" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-collage-final.jpg" />
+              <span>Collage Frames</span>
+            </a>
+          </div>
+          <div class="mobile_all_product_block">
+            <a href="../vinyl.html" title="frame your favorite vinyl album">
+              <img alt="Framed vinyl albums" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-vinyl-final.jpg" />
+              <span>Framed Vinyl</span>
+            </a>
+          </div>
+          <div class="mobile_all_product_block">
+            <!-- <a href="/gifts" title="Custom framing gift ideas">
+              <img alt="Give the gift of custom online framing" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-gifts-final.jpg" />
+              <span>Gift Ideas</span>
+            </a> -->
+            <a href="../tabletop-picture-frames.html" title="Tabletop Picture Frames">
+              <img alt="Tabletop Picture Frame" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-tabletop-frame.jpg" />
+
+              <span>Tabletop Frames</span>
+            </a>
+          </div>
+          <div class="mobile_all_product_block mobile_back_link p-top-10">
+            <a href="#" class="dropdown_nav_link" data-category="mobile"><span><i class="fa fa-arrow-left"></i> &nbsp;Main Menu</span></a>
+          </div>
+        </div>
+
+        <div class="desktop_all_products_wrapper">
+          <div class="columns">
+            <div class="column">
+              <a href="../guide/fetch_artwork_selection.html" title="Create a custom frame">
+                <img alt="custom picture frame" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-frame-final.jpg" />
+
+                <p>Custom Frames</p>
+                <span>Customize a frame for prints, posters, diplomas and more</span>
+              </a>
+            </div>
+            <div class="column">
+              <a href="../photos.html" title="frame a photo">
+                <img alt="Frame a picture online" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-dog-final.jpg" />
+
+                <p>Framed Pictures</p>
+                <span>Upload an image for us to print and frame</span>
+              </a>
+            </div>
+            <div class="column">
+              <a href="../collage-picture-frames.html" title="Make a collage picture frame">
+                <img alt="Collage picture frames" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-collage-final.jpg" />
+                <p>Collage Frames</p>
+                <span>Create a collage picture frame using up to five images</span>
+              </a>
+            </div>
+            <div class="column">
+              <a href="../vinyl.html" title="frame your favorite vinyl album">
+                <img alt="Framed vinyl albums" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-vinyl-final.jpg" />
+
+                <p>Framed Vinyl</p>
+                <span>Display the music you love with uniquely framed records</span>
+              </a>
+            </div>
+
+            <div class="column">
+              <a href="../tabletop-picture-frames.html" title="Tabletop Picture Frames">
+                <img alt="Tabletop Picture Frame" src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-tabletop-frame.jpg" />
+
+                <p>Tabletop Frames</p>
+                <span>Upload a photo, choose your frame. Makes a great gift</span>
+              </a>
+              <!-- <a href="/gifts" title="Custom framing gift ideas">
+                <img alt="Give the gift of custom online framing" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/drawer-gifts-final.jpg" />
+
+                <p>Gift Ideas</p>
+                <span>Frame something special as a unique and thoughtful gift</span>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="our-frames-drawer-content drawer-content">
+        <div class="columns text-only-drawer is-vcentered" style="margin-bottom:10px;">
+          <div class="column">
+            <a href="../our-frame-colors.html" title="Choose the right frame">Browse Frames</a>
+          </div>
+          <div class="column">
+            <a href="../custom-frames-online.html" title="Custom picture frames - Materials">Materials</a>
+          </div>
+          <div class="column">
+            <a href="../blog/level-pricing.html" title="Custom frame pricing">Pricing</a>
+          </div>
+          <div class="column">
+            <a href="../gallery.html" title="custom frame gallery">Customer Gallery</a>
+          </div>
+          <div class="column">
+            <a href="../reviews.html" title="Level Frames Reviews">Reviews</a>
+          </div>
+          <div class="column mobile_back_link">
+            <a href="#" class="dropdown_nav_link" data-category="mobile"><i class="fa fa-arrow-left"></i> &nbsp;Main Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips-drawer-content drawer-content">
+        <div class="columns text-only-drawer is-vcentered" style="margin-bottom:10px;">
+          <div class="column">
+            <a href="../blog.html">Framing 101</a>
+          </div>
+          <div class="column">
+            <a href="#" class="start_intercom_message">Special Requests?</a>
+          </div>
+          <div class="column">
+            <a href="../gifts.html">Gift Ideas</a>
+          </div>
+          <div class="column">
+            <a href="#trade_corporate_popup" class="open-popup-link">Trade / Corporate</a>
+          </div>
+          <div class="column">
+            <a href="http://help.levelframes.com/" target="_blank">F.A.Q</a>
+          </div>
+          <div class="column mobile_back_link">
+            <a href="#" class="dropdown_nav_link" data-category="mobile"><i class="fa fa-arrow-left"></i> &nbsp;Main Menu</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<div class="nav_drawer_darken_page"></div>
+
+<div id="trade_corporate_popup" class="big_get_started_popup mfp-with-anim mfp-hide trade_corporate_popup">
+    <h1 class="align_center">Trade &amp; Corporate Orders</h1>
+    <div class="u-align-center">
+      <p>We've got you covered</p>
+    </div>
+
+    <div class="m-top-40">
+      <div class="columns trade_corporate_links">
+        <div class="column align_center">
+          <a href="../blog/custom-frames-for-corporate-gifting-offices-retail-spaces.html">
+            <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/corporate-office-retail.jpg" alt="custom picture frames for offices" /> <span>Frames for Offices, Retail &amp; Corporate Gifting</span>
+          </a>
+        </div>
+        <div class="column align_center">
+          <a href="../blog/custom-frames-for-creatives-advertisers-interior-designers.html">
+            <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/creatives-interior-designers.jpg" alt="custom frames for interior designers" /> <span>Frames for Interior Designers, Advertisers &amp; Creatives</span>
+          </a>
+        </div>
+        <div class="column align_center">
+          <a href="../blog/custom-frames-digital-art-printing-for-artists-photographers.html">
+            <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/artists-photographers.jpg" alt="custom picture frames for artists and photographers" /> <span>Frames for Artists &amp; Photographers</span>
+          </a>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+<script>
+  $(document).ready(function() {
+    var dropdownNavLink = $('.dropdown_nav_link');
+    var drawerNavTop = $('#drawer_nav_top');
+    window.navDrawer = 0;
+    window.openNavDrawer = '';
+    var drawerContainer = $(".nav_and_drawer_wrapper");
+    var continueShoppingTrigger = $('.continue_shopping_trigger_drawer');
+
+    function openNavDrawer(dropdownCategory) {
+      $('.nav_drawer_darken_page').velocity({ 'opacity': 1 }, { 'display': 'block', 'duration': 300 });
+      $('.drawer-content').hide();
+      $('.' + dropdownCategory + '-drawer-content').show();
+      $('.nav_drawer').velocity({ 'opacity': 1, 'translateY': '0' }, { 'duration': 10 }).velocity({ 'translateY': '0' }, { 'duration': 200 });
+      $('body').addClass('drawer-open');
+      $("body").on("click.drawer", function(e) {
+        if (window.navDrawer === 1 && !drawerContainer.is(e.target) && !continueShoppingTrigger.is(e.target) && drawerContainer.has(e.target).length === 0) {
+          closeNavDrawer();
+        }
+      });
+
+      $('.dropdown_nav_link[data-category=' + dropdownCategory +']').addClass('active-dropdown-nav-link');
+      window.navDrawer = 1;
+      window.openNavDrawer = dropdownCategory;
+    }
+
+    function closeNavDrawer() {
+      $('.dropdown_nav_link').removeClass('active-dropdown-nav-link');
+      $('.nav_drawer_darken_page').velocity({ 'opacity': 0 }, { 'display': 'none', 'duration': 200 });
+      $('.nav_drawer').velocity({ 'opacity': 0, 'translateY': '-100%' }, { 'duration': 200 });
+      $('body').removeClass('drawer-open');
+      // $(document).off('click', registerDrawerClickCloseEvent(e, window.navDrawer));
+      // $('.drawer-open').off('click.drawerBodyClick');
+      $("body").off("click.drawer");
+
+      window.navDrawer = 0;
+    }
+
+    dropdownNavLink.click(function(e) {
+      e.preventDefault();
+      // window.drawerCategoryClicked = $(this).data('category');
+      var drawerLinkCategory = $(this).data('category');
+      if (window.navDrawer === 0) {
+        openNavDrawer(drawerLinkCategory);
+      } else {
+        if (window.openNavDrawer !== drawerLinkCategory) {
+          closeNavDrawer();
+          setTimeout(function() {
+            openNavDrawer(drawerLinkCategory);
+          }, 500);
+        } else {
+          closeNavDrawer();
+        }
+      }
+    });
+
+    $('.nav_drawer_close').click(function(e) {
+      closeNavDrawer();
+    });
+  });
+</script>
+
+
+<div class="new_frame_editor_wrapper" style="position:relative; height:100%">
+  <div class="columns" style="border-bottom:1px solid #eee; padding-top:0; margin-top:0;">
+    <div class="column tabletop_frame_editor_wall_bg" style="padding:0px;">
+      <div class="frame_and_drawer_column">       
+        <div class="frame_and_arrows_container">
+          
+<div class="box_container box_container_10">
+  <div class="align_center">
+    <div class="gyroscope_loader gyroscope_loader--rings frame_loader_10_1"></div>
+  </div>
+  <div class="three_d_box_container three_d_box_container_10_1 panels-backface-invisible">
+    <figure class="three_dimensional_frame three_dimensional_frame_10_1 front">
+      <div class="overlay_gradient overlay_gradient_10_1"></div>
+    </figure>
+    <figure class="front_mount three_d_face"></figure>
+    <figure class="right three_d_face"></figure>
+    <figure class="left three_d_face"></figure>
+    <figure class="back three_d_face">
+      <div class="back_frame_shadows"></div>
+    </figure>
+    <figure class="top three_d_face"></figure>
+    <figure class="bottom three_d_face"></figure>
+    <figure class="top_inner three_d_face"></figure>
+    <figure class="right_inner three_d_face"></figure>
+    <figure class="bottom_inner three_d_face"></figure>
+    <figure class="left_inner three_d_face"></figure>
+
+    <!-- only show when frame rotation at 0 degrees. Hide back frame shadows. Because otherwise on small 5x5 frame, the frame depth is so large that the back frame shadows don't show at all. Need to attach to the front -->
+    <div class="front_frame_shadows"></div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var frameArgs = {
+    artWidth: 5.5,
+    artHeight: 7.5,
+    frameWidthId: 5,
+    profileId: 13,
+    matWidthId: 46,
+    matColorId: 1,
+    glazeId: 1,
+    i: 10,
+    x: 1,
+  };
+
+    frameArgs.imagePath = '';
+    frameArgs.printPrice = 0;
+    frameArgs.printingInHouse = 0;
+
+
+  window.levelFrame_10_1 = new TabletopFrameEditor(frameArgs);
+
+  window.levelFrame_10_1.render3DOptions();
+
+
+  window.tabletopOrientation = "portrait";
+  window.imageUploadOrientation = 'portrait';
+  
+  //allows for smooth transitions when cycling through the frame profiles.  
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/cloud-gray-face5.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/cloud-gray-side5.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/midnight-black-face2.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/midnight-black-side3.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/sandstone-face.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/sandstone-side2.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/milk-chocolate-face5.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/hazelnut-side.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/espresso-face.jpg");
+    $("<img />").attr("src","../../d29mtkonxnc5fw.cloudfront.net/site_assets/espresso-side.jpg");
+});
+</script>
+
+        </div>
+
+        <div class="thumb_white_bottom_drawer">
+          <div class="small_profile_thumbs_new_editor">
+            <a href="#" class="circular_change_profile_btn cycle_frame_option" data-direction="previous" data-category="frameProfiles"><i class="fa fa-chevron-left "></i></a>
+  
+            <span class="generate_profile_thumbs"></span>
+  
+            <a href="#" class="circular_change_profile_btn cycle_frame_option" data-direction="next" data-category="frameProfiles"><i class="fa fa-chevron-right"></i></a>
+          </div>  
+        </div>
+      </div>     
+    </div>
+
+    <div class="column is-5 white_sidebar_bg">
+      <div class="white_sidebar_padding">
+        <div class="tabletop_content">
+          <h2 class="frame_profile_title m-top-10" style="font-size:26px; font-weight:200;">Tabletop Frames</h2>
+          <p class="frame_editor_summary" style="font-size:14px; line-height: 22px;">We take special care in printing your photo perfectly and showcasing it inside a 5" x 7" mat window. Each frame stands on its own with an easel, and can also hang on the wall. Outer frame dimensions are 9" x 11".</p>
+
+          <div class="campaign_active_toggle_area">
+            <input id="landscape_portrait_toggle" type="checkbox" class="tgl tgl-ios" >
+            <label for="landscape_portrait_toggle" class="tgl-btn"></label>
+          </div>
+
+          <p class="landscape_portrait_subtext toggle_subtext">
+            <span class="active_landscape_portrait portrait_text">Portrait</span> / <span class=" landscape_text">Landscape</span>
+          </p>
+          
+          <div class="m-top-20 tabletop_upload_btn_area">
+            <a href="#" class="btn blue_finalize_frame_btn upload_tabletop_image_btn"><i class="fa fa-cloud-upload"></i> &nbsp;Select Photo</a>
+          </div>
+
+          <div class="m-top-20 tabletop_image_too_small_message">
+            <p>The image you uploaded is too small for high quality printing. Please upload a new image with a higher resolution.</p>
+          </div>
+
+          <div class="m-top-20 tabletop_image_orientation_wrong">
+            <p>Your photo was cropped and optimized for the opposite frame orientation. Please upload a new photo, or switch back to your original orientation to continue.</p>
+          </div>
+
+          <div class="tabletop_post_upload_content">
+            <p class="frame_editor_summary"><a href="#" class="upload_tabletop_image_btn link_underline"><i class="fa fa-cloud-upload"></i> Upload a new photo</a></p>
+          </div>
+        </div>
+      
+        <div class="m-top-20 tabletop_frame_style">
+          <span class="white_sidebar_section_label">
+            Frame Style
+          </span>
+      
+          <div class="m-top-10 profile_swatches">
+                <a href="#" data-frame-color-id="13" class="profile_swatch_link profile_id_13 regular_tooltip" title="Cloud Gray">
+                  <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/swatches/cloud-gray-swatch.jpg" alt="swatch" />
+                </a>
+                <a href="#" data-frame-color-id="14" class="profile_swatch_link profile_id_14 regular_tooltip" title="Slate Black">
+                  <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/swatches/midnight-black-swatch.jpg" alt="swatch" />
+                </a>
+                <a href="#" data-frame-color-id="15" class="profile_swatch_link profile_id_15 regular_tooltip" title="Sandstone">
+                  <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/swatches/sandstone2-swatch.jpg" alt="swatch" />
+                </a>
+                <a href="#" data-frame-color-id="16" class="profile_swatch_link profile_id_16 regular_tooltip" title="Hazelnut">
+                  <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/swatches/hazelnut-swatch.jpg" alt="swatch" />
+                </a>
+                <a href="#" data-frame-color-id="17" class="profile_swatch_link profile_id_17 regular_tooltip" title="Espresso">
+                  <img src="../../d29mtkonxnc5fw.cloudfront.net/site_assets/swatches/espresso-swatch.jpg" alt="swatch" />
+                </a>
+          </div>
+        </div>
+
+        <div class="m-top-20">
+          <p class="frame_editor_summary">
+            <span class="frame_options_total_price_text" style="font-weight:400"></span> - <span class="frame_options_profile_text tabletop_profile_title"></span>
+          </p>
+        </div>
+    
+        <div class="m-top-20 hidden_tabletop_finalize_btn">
+          <a href="#" class="btn blue_finalize_frame_btn add_tabletop_frame_to_cart_btn">Add to Cart</a>
+        </div>
+
+      
+        <div class="m-top-30 tabletop_yourframe_text">
+          <p class="frame_editor_summary">
+            <a href="#" class="link_underline frame_editor_more_info_link_scroll">Materials &amp; Shipping Info</a>
+          </p>
+          <p class="frame_editor_summary">
+            Looking for something bigger? <a href="../photos.html" class="link_underline">Custom picture frames for any photo</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lower_frame_editor_page_area">
+  <div class="frame_editor_quality_section">
+    <div class="columns">
+      <div class="column">
+        <h3>Museum-Quality in Every Frame</h3>
+        <ul>
+          <li>Your photo is giclée printed using archival inks guaranteed not to fade</li>
+          <li>Each frame is handcrafted in the USA using wood profiles and acid-free, 4-ply matting to preserve your memories over the long haul</li>
+          <li>Premium, framers grade Acrylite® plexi chosen for its strength and clarity</li>
+          <li>The mat window opening is 5" x 7", outer frame dimensions are 9" x 11"</li>
+          <li>Built into the frame is an easel for standing on any flat surface, as well as sawtooth hardware for hanging on the wall</li>
+          <li>Gift wrapping options at checkout. Save money when you buy more than one!</li>
+        </ul>
+      </div>
+
+      <div class="column shipping_info_quality_column">
+        <h3>Shipping Info</h3>
+        <p>Each tabletop framed photo is handcrafted to order and shipped to your door in about a week. Please note any deadlines you may have in the Special Instructions field at checkout. You will receive an email with tracking info when your order ships. If you have any questions about the process, just let us know via chat or at <a href="mailto:hello@levelframes.com" class="link_underline">hello@levelframes.com</a>.</p>
+      </div>
+    </div>
+
+    <div class="quality_badge_section">
+      <img class="quality_ribbon" src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/quality-ribbon4.svg" alt="Quality ribbon4" />
+
+      <h3>We Stand by Our Work</h3>
+
+      <p>Our goal is to help you on this framing project and many more to come. If your frame shows up with any defects or you’re not completely satisfied, let us know and we will make it right.</p>
+    </div>
+  </div>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="new_footer">
+
+  <div class="footer_flex_container">
+    <div class="new_footer_column">
+      <ul>
+        <li>
+          <h3 class="footer_section_title">
+            Frame With Us
+          </h3>
+        </li>
+        <li>
+          <a href="../custom-frames-online.html">Online Art Framing</a>
+        </li>
+        <li>
+          <a href="../fine-art-printing.html">Fine Art Printing</a>
+        </li>
+        <li>
+          <a href="../collage-picture-frames.html">Collage Picture Frames</a>
+        </li>
+        <li>
+          <a href="../frames-for-pictures.html">Custom Picture Frames</a>
+        </li>
+        <li>
+          <a href="../poster-frames.html">Frames For Posters</a>
+        </li>
+        <li>
+          <a href="../framed-wedding-photos.html">Framed Wedding Photos</a>
+        </li>
+      </ul>
+    </div>
+    <div class="new_footer_column">
+      <ul>
+        <li>
+          <h3 class="footer_section_title">
+            Resources
+          </h3>
+        </li>
+        <li>
+            <a href="../gift_cards/new.html">Gift Cards</a>
+          </li>
+        <li>
+          <a href="http://help.levelframes.com/" target="_blank">Frequently Asked Questions</a>
+        </li>
+        <li>
+          <a href="../blog.html">Framing Tips &amp; Advice</a>
+        </li>
+        <li>
+          <a href="https://www.level.press/" target="_blank">Artist Storefronts - Sell Your Work</a>
+        </li>
+        <li>
+          <a href="../artists.html">Artist Partnerships</a>
+        </li>
+        <li>
+          <a href="../workspace.html">Frames for Your Office</a>
+        </li>
+      </ul>
+    </div>
+    <div class="new_footer_column">
+      <ul>
+        <li>
+          <h3 class="footer_section_title">
+            More About Us
+          </h3>
+        </li>
+
+        <li>
+          <a href="../reviews.html">Customer Reviews</a>
+        </li>
+        <li>
+          <a href="../custom-frames-online.html">Our Museum Quality Frames</a>
+        </li>
+        <li>
+          <a href="https://medium.com/@jhubball/custom-framing-is-a-racket-61461b12278d" target="_blank">Origin Story</a>
+        </li>
+        <li>
+          <a href="../join3e38.html?src=footer" class="green_text" style="color:green !important">$15 off your First Order</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="new_footer_column">
+      <h3 class="footer_section_title align_center">
+        Need Help?
+      </h3>
+
+      <p class="align_center">We’re available by <a href="#">chat</a>, <a href="#">email</a> and phone (<a href="tel:+01-800-804-2495">800-804-2495</a>)</p>
+      <p class="align_center need_help_icons">
+        <a href="#" class="without-underline start_intercom_message"><i class="fa fa-comments"></i></a>
+        <a href="mailto:support@levelframes.com" class="without-underline" target="_blank"><i class="fa fa-envelope"></i></a>
+        <a href="tel:+01-800-804-2495" class="without-underline"><i class="fa fa-phone"></i></a>
+      </p>
+
+      <ul style="border-top:1px solid #eee; margin-top:20px; padding-top:20px; max-width:150px; margin:0 auto;">
+        <li class="new_footer_social_icons">
+          <a href="https://www.facebook.com/levelframes/" class="without-underline" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+
+          <a href="https://instagram.com/levelframes" class="without-underline" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+
+          <a href="https://twitter.com/levelframes" class="without-underline" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+<div class="new_footer_lower">
+  <ul class="new_footer_lower_left">
+    <li>
+      <img style="height:35px; width:35px;" src="../assets/icons/forest-112920358cb33535a8b2ffbda5c0d8c4c29b0b9d84cff9b7bcfb1f0f6c9f8014.svg" alt="Forest 112920358cb33535a8b2ffbda5c0d8c4c29b0b9d84cff9b7bcfb1f0f6c9f8014" />
+    </li>
+    <li class="sustainable">
+      <span>100% Made in the U.S.A. We <i class="fa fa-heart"></i> Sustainability</span>
+    </li>
+  </ul>
+
+  <ul class="new_footer_lower_right">
+    <li>
+      <a href="http://help.levelframes.com/placing-an-order/terms-of-service" target="_blank">Terms of Service</a>
+    </li>
+    <li>
+      <a href="http://help.levelframes.com/level-accounts/privacy-policy" target="_blank">Privacy Policy</a>
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+
+<div id="get_started_choice_popup" class="big_get_started_popup mfp-with-anim mfp-hide">
+  <h1 class="align_center lets_get_started">Let's Get Started</h1>
+
+  <div class="level_row get_started_popup_content">
+    <div class="level_column one_half">
+      <a href="../get_started.html">
+      <div class="align_center">
+        <img src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/Custom-frame.svg" alt="Custom frame" />
+        <h2>Create a Custom Frame</h2>
+        <p>Customize a frame to fit artwork you own.</p>
+        <p><a href="../get_started.html" class="v2_btn blue_v2_btn">Customize</a></p>
+      </div>
+      </a>
+
+    </div>
+    <div class="level_column one_half">
+      <a href="../photos.html">
+      <div class="align_center">
+        <img src="https://d29mtkonxnc5fw.cloudfront.net/site_assets/Upload-photo.svg" alt="Upload photo" />
+        <h2>Upload Photos to Print & Frame</h2>
+        <p>We will print and frame your personal photos.</p>
+        <p><a href="../photos.html" class="v2_btn blue_v2_btn">Print &amp; Frame</a></p>
+      </div>
+      </a>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+
+<form class="new_cart" id="new_cart" action="https://www.levelframes.com/carts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="AH+dC30jOUSCcYR89JLZG6zH9k+rPIZAZd+L6FiOoHEiegrwLl9k7lyCyCgY7jjhokTRnEJrZi7urSyJQ91JpA==" />
+  <input value="none" type="hidden" name="cart[referer]" id="cart_referer" />
+  
+      <input class="cart_artwork_width" type="hidden" name="cart[cart_items_attributes][0][artwork_width]" id="cart_cart_items_attributes_0_artwork_width" />
+      <input class="cart_artwork_height" type="hidden" name="cart[cart_items_attributes][0][artwork_height]" id="cart_cart_items_attributes_0_artwork_height" />
+      <input class="cart_outer_frame_width" type="hidden" name="cart[cart_items_attributes][0][outer_frame_width]" id="cart_cart_items_attributes_0_outer_frame_width" />
+      <input class="cart_outer_frame_height" type="hidden" name="cart[cart_items_attributes][0][outer_frame_height]" id="cart_cart_items_attributes_0_outer_frame_height" />
+      <input class="cart_frame_width" type="hidden" name="cart[cart_items_attributes][0][frame_width]" id="cart_cart_items_attributes_0_frame_width" />
+      <input class="cart_frame_width_id" type="hidden" name="cart[cart_items_attributes][0][frame_width_id]" id="cart_cart_items_attributes_0_frame_width_id" />
+      <input class="cart_profile" type="hidden" name="cart[cart_items_attributes][0][profile]" id="cart_cart_items_attributes_0_profile" />
+      <input class="cart_frame_color_id" type="hidden" name="cart[cart_items_attributes][0][frame_color_id]" id="cart_cart_items_attributes_0_frame_color_id" />
+      <input class="cart_matting" type="hidden" value="0.0" name="cart[cart_items_attributes][0][matting]" id="cart_cart_items_attributes_0_matting" />
+      <input class="cart_mat_id" type="hidden" name="cart[cart_items_attributes][0][mat_id]" id="cart_cart_items_attributes_0_mat_id" />
+      <input class="cart_glaze" type="hidden" name="cart[cart_items_attributes][0][glaze]" id="cart_cart_items_attributes_0_glaze" />
+      <input class="cart_glaze_id" type="hidden" name="cart[cart_items_attributes][0][glaze_id]" id="cart_cart_items_attributes_0_glaze_id" />
+      <input class="cart_mat_color" type="hidden" name="cart[cart_items_attributes][0][mat_color]" id="cart_cart_items_attributes_0_mat_color" />
+      <input class="cart_mat_color_id" type="hidden" name="cart[cart_items_attributes][0][mat_color_id]" id="cart_cart_items_attributes_0_mat_color_id" />
+      <input class="cart_user_image_upload" type="hidden" name="cart[cart_items_attributes][0][user_image_upload]" id="cart_cart_items_attributes_0_user_image_upload" />
+      <input class="cart_total_price" type="hidden" name="cart[cart_items_attributes][0][total_price]" id="cart_cart_items_attributes_0_total_price" />
+
+    <input value="9" type="hidden" name="cart[cart_items_attributes][0][product_type_id]" id="cart_cart_items_attributes_0_product_type_id" />
+    <input value="Frame Back" type="hidden" name="cart[cart_items_attributes][0][custom_field_name]" id="cart_cart_items_attributes_0_custom_field_name" />
+    <input value="Sawtooth plus 8x10 Easel Back and FlexiPoints" type="hidden" name="cart[cart_items_attributes][0][custom_field_value]" id="cart_cart_items_attributes_0_custom_field_value" />
+
+    <input class="tabletop_print_size_token" type="hidden" name="cart[cart_items_attributes][0][level_token]" id="cart_cart_items_attributes_0_level_token" />
+    <input value="1" type="hidden" name="cart[cart_items_attributes][0][paper_type_id]" id="cart_cart_items_attributes_0_paper_type_id" />
+    <input value="Photo Paper Lustre Finish" type="hidden" name="cart[cart_items_attributes][0][paper_type]" id="cart_cart_items_attributes_0_paper_type" />
+
+</form>
+
+<script>
+  var optionsData = JSON.parse('{"constants":{"paperPricePerSquareInch":0.07,"matPricePerSquareInch":0.0225},"frameWidths":{"options":[{"frameWidthId":5,"frameWidth":0.75,"framePricePerLinearInch":0.42},{"frameWidthId":6,"frameWidth":1,"framePricePerLinearInch":0.49},{"frameWidthId":2,"frameWidth":1.25,"framePricePerLinearInch":0.49},{"frameWidthId":7,"frameWidth":1.5,"framePricePerLinearInch":0.49},{"frameWidthId":8,"frameWidth":1.625,"framePricePerLinearInch":0.45}],"optionsDataIndex":{"0.75":0,"1":1,"1.25":2,"1.5":3,"1.625":4},"optionsIdIndex":{"5":0,"6":1,"2":2,"7":3,"8":4},"totalItems":5,"cyclePosition":0},"frameProfiles":{"options":[{"profileId":6,"profile":"Black Maple","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"black","frameWidthsAvailable":[0.75,1,1.25],"frameWidthPrices":{"0.75":"0.42","1":"0.5","1.25":"0.54"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.25":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/black-frame-face17.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/black-vector-side9.jpg","maxBorderImageSlice":85,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/black-frame-horizontal-side.jpg","profileDescription":"Hard to go wrong with this versatile and timeless profile. Pairs well with almost any artwork or photograph.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/black-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/black-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/black-maple-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/black-maple-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/black-maple-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/black-maple-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":2,"profile":"White Maple","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"white","frameWidthsAvailable":[0.75,1,1.25],"frameWidthPrices":{"0.75":"0.42","1":"0.5","1.25":"0.54"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.25":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/white-frame-vector2.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/white-vector-side.jpg","maxBorderImageSlice":135,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/white-frame-side3.jpg","profileDescription":"Another classic found in many homes. Recommended for a contemporary look or to enhance vibrant colors.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/white-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/white-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/white-maple-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/white-maple-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/white-maple-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/white-maple-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":3,"profile":"Natural Maple","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"maple","frameWidthsAvailable":[0.75,1,1.5],"frameWidthPrices":{"0.75":"0.42","1":"0.8","1.5":"1.0"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.5":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.5":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/natural-frame-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/natural-maple-side2.jpg","maxBorderImageSlice":38,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/natural-maple-horizontal.jpg","profileDescription":"This blonde shade of maple with natural grain is a perfect choice for adding a pop of color that is still soft on the eyes.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/maple-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/maple-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-maple-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-maple-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-maple-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-maple-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":5,"profile":"Natural Walnut","frameColorPrice":37.0,"frameCollectionId":"1","swatchName":"walnut","frameWidthsAvailable":[0.75,1,1.5],"frameWidthPrices":{"0.75":"0.42","1":"0.8","1.5":"1.0"},"frameWidthDepths":{"0.75":"1.0","1":"1.0","1.5":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1":"0.125","1.5":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/natural-walnut-face2-darker.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/walnut-darker-side2.jpg","maxBorderImageSlice":76,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/walnut-horizontal.jpg","profileDescription":"A darker, richer wood tone that is versatile enough for a range of decor styles, from modern to bohemian.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/gallery-walnut-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/gallery-walnut-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-walnut-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-walnut-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-walnut-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/gallery/natural-walnut-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":7,"profile":"Weathered Black","frameColorPrice":37.0,"frameCollectionId":"2","swatchName":"","frameWidthsAvailable":[0.75,1.625],"frameWidthPrices":{"0.75":"0.55","1.625":"0.64"},"frameWidthDepths":{"0.75":"1.125","1.625":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.625":"0.25"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/lancaster-dark-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/lancaster-dark-side2.jpg","maxBorderImageSlice":90,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/lancaster-dark-horizontal.jpg","profileDescription":"Dark, midnight hues wash over but do not fully hide the wood grain in this rougher take on a modern black frame.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-black-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":8,"profile":"Weathered Grey","frameColorPrice":37.0,"frameCollectionId":"2","swatchName":"","frameWidthsAvailable":[0.75,1.625],"frameWidthPrices":{"0.75":"0.55","1.625":"0.64"},"frameWidthDepths":{"0.75":"1.125","1.625":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.625":"0.25"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/weathered-grey-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/weathered-grey-improved2.jpg","maxBorderImageSlice":90,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/weathered-grey-side-horizontal1.jpg","profileDescription":"The texture and faded grey finish evoke an old barn aesthetic, while the slimmer shape of this profile adds a modern twist.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-grey-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":9,"profile":"Weathered Natural","frameColorPrice":37.0,"frameCollectionId":"2","swatchName":"","frameWidthsAvailable":[0.75,1.625],"frameWidthPrices":{"0.75":"0.55","1.625":"0.64"},"frameWidthDepths":{"0.75":"1.125","1.625":"0.75"},"frameWidthRabbetDepths":{"0.75":"0.125","1.625":"0.25"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/weathered-natural-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/weathered-natural-side-large3.jpg","maxBorderImageSlice":82,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/driftwood-side-horizontal.jpg","profileDescription":"The sandy color and wide lines of the grain in this profile bring to mind a beach house or remote cabin feel.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/rustic/weathered-natural-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":10,"profile":"Academie Black","frameColorPrice":37.0,"frameCollectionId":"3","swatchName":"","frameWidthsAvailable":[0.75,1.25],"frameWidthPrices":{"0.75":"0.55","1.25":"0.64"},"frameWidthDepths":{"0.75":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.25":"0.25"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/matte-black-side3.jpg","maxBorderImageSlice":108,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/black-frame-horizontal-side.jpg","profileDescription":"The gold trim creates a lavish contrast to the darker base, creating a dressed up version of our Gallery Black profile.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-black-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":12,"profile":"Academie Gold","frameColorPrice":37.0,"frameCollectionId":"3","swatchName":"","frameWidthsAvailable":[0.75,1.25],"frameWidthPrices":{"0.75":"0.55","1.25":"0.64"},"frameWidthDepths":{"0.75":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.25":"0.25"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-gold.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-gold-side-xlarge.jpg","maxBorderImageSlice":120,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-gold-horizontal.jpg","profileDescription":"A vintage profile that will stand out in any space with its elegant contours, gold finish and subtle flecks.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-gold-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":11,"profile":"Academie Silver","frameColorPrice":37.0,"frameCollectionId":"3","swatchName":"","frameWidthsAvailable":[0.75,1.25],"frameWidthPrices":{"0.75":"0.55","1.25":"0.64"},"frameWidthDepths":{"0.75":"1.0","1.25":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125","1.25":"0.25"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-yellow.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-silver-side-large3.jpg","maxBorderImageSlice":105,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/academie-yellow-horizontal.jpg","profileDescription":"A silver, champagne profile perfect for classing up extra special artwork and moments caught on camera.","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-corner-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/classic/academie-silver-shelf-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":false},{"profileId":13,"profile":"Cloud Gray","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/cloud-gray-face5.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/cloud-gray-side5.jpg","maxBorderImageSlice":80,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/cloud-gray-side5.jpg","profileDescription":"","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-side-thumb2.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-side-large2.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-shelf-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-cloudgray-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":14,"profile":"Slate Black","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/midnight-black-face2.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/midnight-black-side3.jpg","maxBorderImageSlice":135,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/midnight-black-side3.jpg","profileDescription":"","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-shelf-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-slateblack-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":15,"profile":"Sandstone","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/sandstone-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/sandstone-side2.jpg","maxBorderImageSlice":106,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/sandstone-side2.jpg","profileDescription":"","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-side-thumb2.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-side-large3.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-shelf-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-sandstone-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":16,"profile":"Hazelnut","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/milk-chocolate-face5.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/hazelnut-side.jpg","maxBorderImageSlice":100,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/hazelnut-side.jpg","profileDescription":"","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-side-thumb7.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-side-large7.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-shelf-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-hazelnut-corner-large.jpg"}],"includeInRegularEditor":false,"includeInTableTopEditor":true},{"profileId":17,"profile":"Espresso","frameColorPrice":26.0,"frameCollectionId":"","swatchName":"","frameWidthsAvailable":[0.75],"frameWidthPrices":{"0.75":"0.42"},"frameWidthDepths":{"0.75":"1.0"},"frameWidthRabbetDepths":{"0.75":"0.125"},"faceImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/espresso-face.jpg","sideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/espresso-side.jpg","maxBorderImageSlice":100,"horizontalSideImage":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/espresso-side.jpg","profileDescription":".","frameColorImages":[{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-side-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-side-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-shelf-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-shelf-large.jpg"},{"thumb":"../../d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-corner-thumb.jpg","large":"https://d29mtkonxnc5fw.cloudfront.net/site_assets/corner_shots/tabletop/table-espresso-corner-large.jpg"}],"includeInRegularEditor":true,"includeInTableTopEditor":true}],"optionsDataIndex":{"Black Maple":0,"White Maple":1,"Natural Maple":2,"Natural Walnut":3,"Weathered Black":4,"Weathered Grey":5,"Weathered Natural":6,"Academie Black":7,"Academie Gold":8,"Academie Silver":9,"Cloud Gray":10,"Slate Black":11,"Sandstone":12,"Hazelnut":13,"Espresso":14},"optionsIdIndex":{"6":0,"2":1,"3":2,"5":3,"7":4,"8":5,"9":6,"10":7,"12":8,"11":9,"13":10,"14":11,"15":12,"16":13,"17":14},"totalItems":15,"cyclePosition":0},"matWidths":{"options":[{"matWidthId":4,"matWidth":0},{"matWidthId":1,"matWidth":1},{"matWidthId":46,"matWidth":1.25},{"matWidthId":7,"matWidth":1.5},{"matWidthId":2,"matWidth":2},{"matWidthId":8,"matWidth":2.5},{"matWidthId":3,"matWidth":3},{"matWidthId":9,"matWidth":3.5},{"matWidthId":12,"matWidth":4}],"optionsDataIndex":{"0":0,"1":1,"1.25":2,"1.5":3,"2":4,"2.5":5,"3":6,"3.5":7,"4":8},"optionsIdIndex":{"4":0,"1":1,"46":2,"7":3,"2":4,"8":5,"3":6,"9":7,"12":8},"totalItems":8,"cyclePosition":0,"regularEditorOptions":[{"matWidthId":4,"matWidth":0},{"matWidthId":1,"matWidth":1},{"matWidthId":7,"matWidth":1.5},{"matWidthId":2,"matWidth":2},{"matWidthId":8,"matWidth":2.5},{"matWidthId":3,"matWidth":3},{"matWidthId":9,"matWidth":3.5},{"matWidthId":12,"matWidth":4}]},"matColors":{"options":[{"matColorId":1,"matColor":"Off-White","matColorValue":"hsla(0, 0%, 100%, 1)","matInnerShadedBevelColor":"#d3c8c2","matInnerLitBevelColor":"#dedede"},{"matColorId":2,"matColor":"Black","matColorValue":"hsla(0, 0%, 13%, 1)","matInnerShadedBevelColor":"#333","matInnerLitBevelColor":"#333"}],"optionsDataIndex":{"Off-White":0,"Black":1},"optionsIdIndex":{"1":0,"2":1},"totalItems":2,"cyclePosition":0},"glazes":{"options":[{"glazeId":1,"glaze":"Standard","glazePricePerSquareInch":0.06},{"glazeId":2,"glaze":"UV Protection","glazePricePerSquareInch":0.08},{"glazeId":4,"glaze":"Non-Glare","glazePricePerSquareInch":0.08}],"optionsDataIndex":{"Standard":0,"UV Protection":1,"Non-Glare":2},"optionsIdIndex":{"1":0,"2":1,"4":2},"totalItems":3,"cyclePosition":0}}');
+
+  function triggerFB(e) {
+    e.preventDefault();
+    FB.ui({
+    method: 'share',
+    quote: "I just created this custom frame with @levelframes. What do you think? How would you frame it:",
+    mobile_iframe: true,
+    href: window.shareFrameLink,
+    }, function(response){});
+  }
+
+  $(document).ready(function() {
+  });
+</script>
+
+  </div>
+
+  <div id="fb-root"></div>
+
+<script>
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      if (response.status === 'connected') {
+        // var accessToken = response.authResponse.accessToken;
+        // console.log(accessToken);
+        window.location = 'https://www.facebook.com/v2.6/dialog/oauth?client_id=335295696494070&amp;redirect_uri=https%3A%2F%2Fwww.levelframes.com%2Fusers%2Fauth%2Ffacebook%2Fcallback&amp;response_type=code&amp;scope=email&amp;state=712362242546a19a8ebedb943a8c6415bc21aa9876fb60a1';
+      } else {
+        var facebookOauthFail = "Facebook login status no connected. Facebook_app_scripts, line 11. Response:" + response;
+        Raven.captureMessage(facebookOauthFail);
+      }
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '335295696494070',
+      cookie     : true,  // enable cookies to allow the server to access
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "../../connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <script>
+    var hideIntercomLauncher = false;
+
+    if (levelApp.globals.winW <= 600) {
+      // only hiding on certain pages, so checking for server side variable in controller
+      hideIntercomLauncher = true;
+    }
+    
+      window.intercomSettings = {
+        app_id: "aj5964id",
+        hide_default_launcher: hideIntercomLauncher
+      };
+
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/aj5964id';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+  </script>
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX3FHMS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
