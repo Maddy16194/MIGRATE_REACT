@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    <title>Nirathisayam</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+	<style>
+	.price{
+	padding-left: 460px; 
+	}
+	</style> 
+    
+    <body>
+            <nav>
+                    <div class="nav-wrapper ">
+                      <a href="index.html" class="brand-logo"><img src="../img/test-2.png"></a>
+                      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="">Made By you</a></li>
+                        <li><a href="">Advice & tips</a></li>
+                        <li><a href="">Buy</a></li>
+                        <li><a class="dropdown-trigger green-text" href="#!" data-target="howitworks">How it works<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="">Get help</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <ul id="howitworks" class="dropdown-content">
+                      <li><a href="how-it-works.html">How it works</a></li>
+                      <li><a href="what-we-frame.html"> What we Frame</a></li>
+                      
+                      <li><a href="#!">three</a></li>
+                    </ul>
+                
+                  <ul class="sidenav" id="mobile-demo">
+                        <li><a href="">Made By you</a></li>
+                        <li><a href="">Advice & tips</a></li>
+                        <li><a href="">Buy</a></li>
+                        <li><a href="">Get help</a></li>
+                    <li><a class="modal-trigger" href="#modal1">Download Android app</a></li>
+                  </ul>
+
+                  <div class="container">
+				   <h4>Shopping Cart</h4>
+				   <div class="row">
+      <div class="col s9">
+	  <div class="col ">
+   
+    <div class="card horizontal s7">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <b>Black</b>
+		  <p class="right price"> <b>250</b></p>
+		  <div class="right price">
+		  <p>QTY: 1</p>
+		  </div>
+		  <div>
+		    <span>10"x12"</span>
+			
+		  </div>
+		
+        </div>
+        <div class="card-action">
+          <a class="right" href="#">remove</a>
+        </div>
+      </div>
+    </div>
+  </div>
+	  
+	  </div>
+      <div class="col s3">
+	   
+    <div class="col center ">
+      <div class="card-panel ">
+	 
+	  <a class="waves-effect waves-light btn">Check out</a>
+	  <p>Tax and shipping will be calculated at checkout.</p>
+        
+      </div>
+    </div>
+  
+	  
+	  </div>
+    </div>
+				  </div>
+
+                        <!-- <div class="row">
+                            <div class="col s12">
+                              <ul class="tabs">
+                                <li class="tab col s3"><a class="active" href="#test1">Description</a></li>
+                                <li class="tab col s3"><a  href="#reviews">Reviews</a></li>
+                               
+                                <li class="tab col s3"><a href="#faq">FAQ</a></li>
+                              </ul>
+                            </div>
+                            <div id="test1" class="col s12">Description</div>
+                            <div id="reviews" class="col s12">Reviews</div>
+                            <div id="faq" class="col s12">FAQ</div>
+                         
+                          </div> -->
+                  </div>
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+	  $(document).ready(function(){
+    $('select').formSelect();
+  });
+       
+         $(document).ready(function(){
+    $('.tabs').tabs();
+  });
+
+      $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+  $(".dropdown-trigger").dropdown();
+  $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+  
+      </script>
+    </body>
+  </html>
