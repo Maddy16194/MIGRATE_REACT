@@ -11,13 +11,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 	<style>
-	.price{
-	padding-left: 460px; 
+	.shopping_btn{
+	padding-top: 20px;
 	}
-	.mprice{
-	padding-left: 110px; 
-	}
-	</style> 
+	</style>
     
     <body>
             <nav>
@@ -49,80 +46,14 @@
                   </ul>
 
                   <div class="container">
-				   <h4>Shopping Cart</h4>
-				     <!--mobile only-->
-				  <div class="show-on-medium-and-up">
-				  <div class="card horizontal">
-      <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-           <b>Black</b>
-		   <p class="right mprice"> <b>Rs. 250</b></p>
-		  <div class="">
-		  <p>QTY: 1</p>
-		  </div>	
-        </div>
-        <div class="card-action">
-          <a href="#">Remove</a>
-        </div>
-      </div>
-	  
-    </div>
-	<div class="card-panel center ">
-	 
-	  <a class="waves-effect waves-light btn ">Check out</a>
-	  <p>Tax and shipping will be calculated at checkout.</p>
-        
-      </div>
+				  
+				  <h4 class="center"> Your Cart is empty</h4>
+				  <div class="center">
+				   <img class="responsive-img" src="cartEmpty.svg">
 				  </div>
-				   <!-- desktop and tablet only-->
-				   <div class="hide-on-med-and-down">
-				   <div class="row">
-      <div class="col s9">
-	  <div class="col ">
-   
-    <div class="card horizontal s7">
-      <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <b>Black</b>
-		  <p class="right price"> <b>250</b></p>
-		  <div class="right price">
-		  <p>QTY: 1</p>
-		  </div>
-		  <div>
-		    <span>10"x12"</span>
-			
-		  </div>
-		
-        </div>
-        <div class="card-action">
-          <a class="right" href="#">remove</a>
-        </div>
-      </div>
-    </div>
-  </div>
-	  
-	  </div>
-      <div class="col s3">
-	   
-    <div class="col center ">
-      <div class="card-panel ">
-	 
-	  <a class="waves-effect waves-light btn">Check out</a>
-	  <p>Tax and shipping will be calculated at checkout.</p>
-        
-      </div>
-    </div>
-  
-	  
-	  </div>
-    </div>
-	</div>
+				  <div class="center shopping_btn">
+				  				  <a class="waves-effect waves-light btn center">Start Shopping</a>
+				  </div>
 				  </div>
 
                         <!-- <div class="row">
@@ -146,10 +77,6 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script>
-	  $(document).ready(function(){
-    $('select').formSelect();
-  });
-       
          $(document).ready(function(){
     $('.tabs').tabs();
   });
