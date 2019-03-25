@@ -95,7 +95,14 @@
                             <h4>Black Frame</h4>
                             <span class="grey-text">Size: 10"x12"</span>
                             <p>Some description here</p>
-							
+								<div class="input-field col s12">
+									<select>
+									  <option value="1"> 1</option>
+									  <option value="2"> 2</option>
+									  <option value="3"> 3</option>
+									</select>
+									<label>QTY:</label>
+								  </div>
 							<p class="discount-container">
 								<b class="price">Rs. 479</b>
 									<s class="mrp">Rs.599</s>
@@ -227,6 +234,9 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.min.js"></script>
       <script>
+	   $(document).ready(function(){
+    $('select').formSelect();
+  });
          $(document).ready(function(){
     $('.tabs').tabs();
   });
