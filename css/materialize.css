@@ -9098,10 +9098,21 @@ input[type=range]::-ms-thumb {
   text-align: center;
   padding-bottom: 20px;
 }
+ .gtstr_bg{
+  background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+    background-color: #1c4535;
+    height:350px;
+}
+.ffm{
+  padding-right: 250px;
+  
+} 
 .gtstr{
-  padding-left: 150px;
+  
+  padding-left: 650px;
   padding-top: 100px;
 }
+
 .eaz{
   width: 59%;
   float: left;
@@ -9110,4 +9121,25 @@ input[type=range]::-ms-thumb {
 .map-overlay{
   display: block;
     background: rgba(0, 0, 0, .6);
+}
+.home_human_hero_padding {
+  padding: 140px 20px 220px 20px;
+}
+.page_wrapper--bigger {
+  width: 1150px;
+}
+.page_wrapper {
+  
+  margin: 0 auto;
+  width: 980px;
+  position: relative;
+  height: 100%;
+  padding-top: 60px;
+}
+.u-align-center {
+  text-align: center;
+}
+.full_width_background_image_section {
+  position: relative;
+  color: #fff;
 }
