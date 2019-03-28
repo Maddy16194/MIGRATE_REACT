@@ -1,152 +1,259 @@
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
+(function($) {
+    $(function() {
+      var window_width = $(window).width();
   
-      document.getElementById("user_div").style.display = "block";
-      document.getElementById("login_div").style.display = "none";
+      // convert rgb to hex value string
+      function rgb2hex(rgb) {
+        if (/^#[0-9A-F]{6}$/i.test(rgb)) {
+          return rgb;
+        }
   
-      var user = firebase.auth().currentUser;
+        rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
   
-      if(user != null){
+        if (rgb === null) {
+          return 'N/A';
+        }
   
-        var email_id = user.email;
-        document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+        function hex(x) {
+          return ('0' + parseInt(x).toString(16)).slice(-2);
+        }
   
+        return '#' + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
       }
   
-    } else {
-      // No user is signed in.
-  
-      document.getElementById("user_div").style.display = "none";
-      document.getElementById("login_div").style.display = "block";
-  
-    }
-  });
-  
-  function login(){
-  
-    var userEmail = document.getElementById("email_field").value;
-    var userPass = document.getElementById("password_field").value;
-  
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-  
-      window.alert("Error : " + errorMessage);
-  
-      // ...
-    });
-  
-  }
-  
-  function logout(){
-    firebase.auth().signOut();
-  }
-  
-  /**
- * Image Framer v.1.1.
- *
- * Copyright 2019, Madhu N
- * Licensed under: MIT ( more info in the included copyright.txt )
- */
-
-(function($){
-  $.fn.extend({
-      imageframer: function(options) {
-
-          var defaults = {
-              frameType: 'wood-light', // Full list of frames can be found from the website.
-              frameSize: 1,           // Numbers from 1 to 4. 1 is the smallest and 4 is the largest.
-              innerShadow: 1,         // Numbers from 1 to 4. 1 is the smallest / lightest and 4 is the biggest / darkest.
-              disable: false,          // Enables you to disable the plugin.
-              callback: function() {}
-          };
-
-          return this.each(function() {
-
-              var obj = $(this),
-                  objD = obj.data(),
-                  o = $.extend(true, {}, defaults, options, objD );
-
-          // Don't do nuffing if disable is set to true.
-          // If you for example don't want to frame one specific image, you can set disable to true with data-attribute, or just disable Image Framer all together through custom options.
-          if ( o.disable !== true ) {
-
-              // A few fail-safes to make sure that we stay within the limits of the plugin.
-              var fs = o.frameSize > 4 ? 4 : o.frameSize,
-                  is = o.innerShadow > 4 ? 4 : o.innerShadow,
-                  frameType = o.frameType.toLowerCase(),
-                  frameSize = 'size' + fs;
-
-              // Generate wrapping elements.
-              obj
-               .addClass('if-image')
-               .wrap(
-                  '<div class="if-equalizer">' +
-                      '<div class="if-wrap if-'+ frameType +' if-'+ frameSize +'"></div>' +
-                  '</div>'
-              );
-
-              var sifWrap = obj.parent('.if-wrap'),
-                  background = [ ' background-image: url( imageframer/frames/'+ frameType + '-' + frameSize + '/', '.png ); ' ];
-
-              // - Generate frame elements.
-              // - Fetch proper background images for each element.
-              // - This could be done purely with css and it would even have some benefits, but this is a bit more flexible as far as making new frames go and requires less code.
-              $(
-                  '<span class="if-top if-sides" style="'+ background[0] + 'top-bottom' + background[1] +'"></span>' +
-                  '<span class="if-right if-sides" style="'+ background[0] + 'right-left' + background[1] +'"></span>' +
-                  '<span class="if-bottom if-sides" style="'+ background[0] + 'top-bottom' + background[1] +'"></span>' +
-                  '<span class="if-left if-sides" style="'+ background[0] + 'right-left' + background[1] +'"></span>' +
-                  '<span class="if-top-right if-corners" style="'+ background[0] + 'corners' + background[1] +'"></span>' +
-                  '<span class="if-bottom-right if-corners" style="'+ background[0] + 'corners' + background[1] +'"></span>' +
-                  '<span class="if-bottom-left if-corners" style="'+ background[0] + 'corners' + background[1] +'"></span>' +
-                  '<span class="if-top-left if-corners" style="'+ background[0] + 'corners' + background[1] +'"></span>'
-              ).insertBefore( obj );
-
-              // Inner shadow
-              if ( o.innerShadow ) {
-
-                  $('<img class="if-innerShadow" src="imageframer/innerShadows/is-'+ is +'.png" alt="" />').appendTo( sifWrap );
-              }
-
-
-              // Callback
-              // You can't set any callback code as data-attribute, but you can still disable it via data-attribues. i.e. <div data-callback="false"></div>.
-              if ( o.callback !== false ) {
-                  o.callback.call( sifWrap );
-              }
-          }
-
+      $('.dynamic-color .col').each(function() {
+        $(this)
+          .children()
+          .each(function() {
+            var color = $(this).css('background-color'),
+              classes = $(this).attr('class');
+            $(this).html('<span>' + rgb2hex(color) + ' ' + classes + '</span>');
+            if (classes.indexOf('darken') >= 0 || $(this).hasClass('black')) {
+              $(this).css('color', 'rgba(255,255,255,.9');
+            }
           });
-      }
-  });
-})(jQuery);
-
-jQuery(document).ready(function($){
+      });
   
-    window.onload = function (){
-      $(".bts-popup").delay(1000).addClass('is-visible');
+      // Floating-Fixed table of contents
+      setTimeout(function() {
+        var tocWrapperHeight = 260; // Max height of ads.
+        var tocHeight = $('.toc-wrapper .table-of-contents').length
+          ? $('.toc-wrapper .table-of-contents').height()
+          : 0;
+        var socialHeight = 95; // Height of unloaded social media in footer.
+        var footerOffset = $('body > footer').first().length
+          ? $('body > footer')
+              .first()
+              .offset().top
+          : 0;
+        var bottomOffset = footerOffset - socialHeight - tocHeight - tocWrapperHeight;
+  
+        if ($('nav').length) {
+          console.log('Nav pushpin', $('nav').height());
+          $('.toc-wrapper').pushpin({
+            top: $('nav').height(),
+            bottom: bottomOffset
+          });
+        } else if ($('#index-banner').length) {
+          $('.toc-wrapper').pushpin({
+            top: $('#index-banner').height(),
+            bottom: bottomOffset
+          });
+        } else {
+          $('.toc-wrapper').pushpin({
+            top: 0,
+            bottom: bottomOffset
+          });
+        }
+      }, 100);
+  
+      // BuySellAds Detection
+      var $bsa = $('.buysellads'),
+        $timesToCheck = 3;
+      function checkForChanges() {
+        if (!$bsa.find('#carbonads').length) {
+          $timesToCheck -= 1;
+          if ($timesToCheck >= 0) {
+            setTimeout(checkForChanges, 500);
+          } else {
+            var donateAd = $(
+              '<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>'
+            );
+  
+            $bsa.append(donateAd);
+          }
+        }
       }
-    
-      //open popup
-      $('.bts-popup-trigger').on('click', function(event){
-          event.preventDefault();
-          $('.bts-popup').addClass('is-visible');
+      checkForChanges();
+  
+      // BuySellAds Demos close button.
+      $('.buysellads.buysellads-demo .close').on('click', function() {
+        $(this)
+          .parent()
+          .remove();
       });
-      
-      //close popup
-      $('.bts-popup').on('click', function(event){
-          if( $(event.target).is('.bts-popup-close') || $(event.target).is('.bts-popup') ) {
-              event.preventDefault();
-              $(this).removeClass('is-visible');
+  
+      // Github Latest Commit
+      if ($('.github-commit').length) {
+        // Checks if widget div exists (Index only)
+        $.ajax({
+          url: 'https://api.github.com/repos/dogfalo/materialize/commits/v1-dev',
+          dataType: 'json',
+          success: function(data) {
+            var sha = data.sha,
+              date = jQuery.timeago(data.commit.author.date);
+            if (window_width < 1120) {
+              sha = sha.substring(0, 7);
+            }
+            $('.github-commit')
+              .find('.date')
+              .html(date);
+            $('.github-commit')
+              .find('.sha')
+              .html(sha)
+              .attr('href', data.html_url);
           }
+        });
+      }
+  
+      // Toggle Flow Text
+      var toggleFlowTextButton = $('#flow-toggle');
+      toggleFlowTextButton.click(function() {
+        $('#flow-text-demo')
+          .children('p')
+          .each(function() {
+            $(this).toggleClass('flow-text');
+          });
       });
-      //close popup when clicking the esc keyboard button
-      $(document).keyup(function(event){
-          if(event.which=='27'){
-              $('.bts-popup').removeClass('is-visible');
+  
+      //    Toggle Containers on page
+      var toggleContainersButton = $('#container-toggle-button');
+      toggleContainersButton.click(function() {
+        $('body .browser-window .container, .had-container').each(function() {
+          $(this).toggleClass('had-container');
+          $(this).toggleClass('container');
+          if ($(this).hasClass('container')) {
+            toggleContainersButton.text('Turn off Containers');
+          } else {
+            toggleContainersButton.text('Turn on Containers');
           }
+        });
       });
-  });
+  
+      // Detect touch screen and enable scrollbar if necessary
+      function is_touch_device() {
+        try {
+          document.createEvent('TouchEvent');
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+      if (is_touch_device()) {
+        $('#nav-mobile').css({ overflow: 'auto' });
+      }
+  
+      // Set checkbox on forms.html to indeterminate
+      var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
+      if (indeterminateCheckbox !== null) indeterminateCheckbox.indeterminate = true;
+  
+      // Pushpin Demo Init
+      if ($('.pushpin-demo-nav').length) {
+        $('.pushpin-demo-nav').each(function() {
+          var $this = $(this);
+          var $target = $('#' + $(this).attr('data-target'));
+          $this.pushpin({
+            top: $target.offset().top,
+            bottom: $target.offset().top + $target.outerHeight() - $this.height()
+          });
+        });
+      }
+  
+      // CSS Transitions Demo Init
+      if ($('#scale-demo').length && $('#scale-demo-trigger').length) {
+        $('#scale-demo-trigger').click(function() {
+          $('#scale-demo').toggleClass('scale-out');
+        });
+      }
+  
+      // Plugin initialization
+      $('.carousel').carousel();
+      $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        onCycleTo: function(item, dragged) {}
+      });
+      $('.collapsible').collapsible();
+      $('.collapsible.expandable').collapsible({
+        accordion: false
+      });
+  
+      $('.dropdown-trigger').dropdown();
+      $('.slider').slider();
+      $('.parallax').parallax();
+      $('.materialboxed').materialbox();
+      $('.modal').modal();
+      $('.scrollspy').scrollSpy();
+      $('.datepicker').datepicker();
+      $('.tabs').tabs();
+      $('.timepicker').timepicker();
+      $('.tooltipped').tooltip();
+      $('select')
+        .not('.disabled')
+        .formSelect();
+      $('.sidenav').sidenav();
+      $('.tap-target').tapTarget();
+      $('input.autocomplete').autocomplete({
+        data: { Apple: null, Microsoft: null, Google: 'http://placehold.it/250x250' }
+      });
+      $('input[data-length], textarea[data-length]').characterCounter();
+  
+      // Swipeable Tabs Demo Init
+      if ($('#tabs-swipe-demo').length) {
+        $('#tabs-swipe-demo').tabs({ swipeable: true });
+      }
+  
+      // Chips
+      $('.chips').chips();
+      $('.chips-initial').chips({
+        readOnly: true,
+        data: [
+          {
+            tag: 'Apple'
+          },
+          {
+            tag: 'Microsoft'
+          },
+          {
+            tag: 'Google'
+          }
+        ]
+      });
+      $('.chips-placeholder').chips({
+        placeholder: 'Enter a tag',
+        secondaryPlaceholder: '+Tag'
+      });
+      $('.chips-autocomplete').chips({
+        autocompleteOptions: {
+          data: {
+            Apple: null,
+            Microsoft: null,
+            Google: null
+          }
+        }
+      });
+  
+      // Fab
+      $('.fixed-action-btn').floatingActionButton();
+      $('.fixed-action-btn.horizontal').floatingActionButton({
+        direction: 'left'
+      });
+      $('.fixed-action-btn.click-to-toggle').floatingActionButton({
+        direction: 'left',
+        hoverEnabled: false
+      });
+      $('.fixed-action-btn.toolbar').floatingActionButton({
+        toolbarEnabled: true
+      });
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
