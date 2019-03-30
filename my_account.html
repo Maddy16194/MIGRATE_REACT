@@ -14,6 +14,9 @@
     .edit{
       font-size: 20px;
     }
+    .pass{
+     margin-right: 5px;
+    }
     </style>
 
     <body >
@@ -45,7 +48,7 @@
                     <li><a class="modal-trigger" href="#modal1">Download Android app</a></li>
                   </ul>
                 <div class="container ">
-                    <h3>My Account <a class="edit" href="profile_edit.html">[Edit profile]</a></h3>
+                    <h3>My Account <a class="edit waves-effect waves-light  modal-trigger"  href="#password_edit">[Edit profile]</a></h3>
                     
                 </div>
                 <div class="divider "></div>
@@ -71,10 +74,37 @@
                     </div>
                 </div>
 
+                <div id="password_edit" class="modal">
+                  <div class="modal-content">
+                    <h4 class="center">Change password</h4>
+                    <div class="container pass">
+                      <form>
+                            <div class="row">
+                                    <div class="input-field col s6">
+                                      <input id="oldpassword" type="password" class="validate">
+                                      <label for="oldpassword">Old Password</label>
+                                    </div>
+                                  </div>
+                                  <div class="row ">
+                                        <div class="input-field col s6">
+                                          <input id="newpassword" type="password" class="validate">
+                                          <label for="newpassword">New Password</label>
+                                        </div>
+                                      </div>
+                      </form>
+                      <a class="btn" href="">Update</a>
+                     </div>  
+    
+                  </div>
+
 
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-     
+     <script>
+      $(document).ready(function(){
+    $('.modal').modal();
+  });
+     </script>
     </body>
   </html>
