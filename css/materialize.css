@@ -9122,9 +9122,7 @@ input[type=range]::-ms-thumb {
   display: block;
     background: rgba(0, 0, 0, .6);
 }
-.home_human_hero_padding {
-  padding: 140px 20px 220px 20px;
-}
+
 .page_wrapper--bigger {
   width: 1150px;
 }
@@ -9142,4 +9140,13 @@ input[type=range]::-ms-thumb {
 .full_width_background_image_section {
   position: relative;
   color: #fff;
+}
+
+.login_img{
+  width: 150px;
+  height: 150px;
+}
+
+.view_prf{
+  padding-top: 120px;
 }
