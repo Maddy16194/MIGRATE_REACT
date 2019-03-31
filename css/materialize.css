@@ -9150,3 +9150,52 @@ input[type=range]::-ms-thumb {
 .view_prf{
   padding-top: 120px;
 }
+
+.login{
+  padding-left: 400px;
+}
+.extra{
+  padding-top: 20px;
+}
+@media  only screen and (max-width: 660px){
+  .extra{
+  padding-top: 50px;
+}
+}
+.mb_login{
+  padding-top: 40px;
+}
+.alg{
+  padding-left: 30px;
+}
+.alg1{
+  padding-left: 13px;
+}
+.login{
+  padding-left: 500px;
+}
+.extra{
+  padding-top: 20px;
+}
+@media  only screen and (max-width: 660px){
+  .extra{
+  padding-top: 50px;
+}
+}
+.mb_login{
+  padding-top: 180px;
+}
+
+.edit{
+  font-size: 20px;
+}
+.pass{
+ margin-right: 5px;
+}
+.frame_something{
+  background-color: #2e4e44;
+  height: 180px;
+}
+.frme_pdd{
+  padding-top: 20px;
+}
