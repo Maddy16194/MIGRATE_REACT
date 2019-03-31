@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Gallery Wall - Nirathisayam</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+    .login_img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .view_prf{
+        padding-top: 120px;
+    }
+    </style>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper ">
+              <a href="index.html" class="brand-logo"><img src="img/test-2.png"></a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a onclick="M.toast({html: 'Arent you early bird, this is still in development'})">Made By you</a></li>
+                <li><a href="">Advice & tips</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="what-we-frame.html"> What we Frame</a></li>
+                <!-- <li><a class="dropdown-trigger green-text" href="#!" data-target="howitworks">How it works<i class="material-icons right">arrow_drop_down</i></a></li> -->
+                <li><a href="my_account">Login</a></li>
+              </ul>
+            </div>
+          </nav>
+                
+                  <ul class="sidenav" id="mobile-demo">
+                        <li><a href="">Made By you</a></li>
+                        <li><a href="">Advice & tips</a></li>
+                        <li><a href="">Buy</a></li>
+                        <li><a href="">Get help</a></li>
+                    <li><a class="modal-trigger" href="#modal1">Download Android app</a></li>
+                  </ul>
+                  
+                   <div class="container center view_prf">
+                       <img  class="responsive-img login_img" src="img/login.svg">
+                       <h4>Login to view recent Orders/Profile</h4>
+                       </div>
+
+      
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+     
+    </body>
+  </html>
