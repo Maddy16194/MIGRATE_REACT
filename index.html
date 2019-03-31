@@ -121,11 +121,30 @@
           src="https://www.facebook.com/tr?id=595024937575954&ev=PageView&noscript=1"
         /></noscript>
         <!-- End Facebook Pixel Code -->
+    <style>
+    .product_bg{
+      background: url(img/product_bg.png);
+      height:452px;
+    }
+    .shp_text{
+     padding-top: 120px;
+     
+    }
+    .shp_btn{
+      padding-left: 100px;
+    } 
+    .process-image{
+      width:70%;
+      height:auto;
+    }
+    .tes{
+      padding-top:90px;
+    }
     </style>
 
     <body>
         <div class="navbar-fixed">
-            <nav>
+            <nav class="z-depth-3">
                 <div class="nav-wrapper ">
                   <a href="index.html" class="brand-logo"><img src="img/test-2.png"></a>
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -158,28 +177,109 @@
 					<a href="config/index.html" class="waves-effect waves-light btn green-text white">Customize your Frame!</a>
 					</div></div></div>
                 </div>
+               <br> 
+              <div class="product_bg">
+
+                  <div class="row">
+                      <div class="col s7 push-s5">
+                          <div class="products_cards">
+                    
+                              <div class="row">
+              
+                                <div class="col s4">
+                                  <div class="row">
+                                    <div class="col ">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="https://materializecss.com/images/sample-1.jpg">
+                                         
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title">Card Title</span>
+                                          <p>I am a very simple card. I am good at containing small bits of information.
+                                          I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                       
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col s4">
+                                  <div class="row">
+                                    <div class="col ">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="https://materializecss.com/images/sample-1.jpg">
+                                        
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title">Card Title</span>
+                                          <p>I am a very simple card. I am good at containing small bits of information.
+                                          I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col s4">
+                                  <div class="row">
+                                    <div class="col ">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="https://materializecss.com/images/sample-1.jpg">
+                                         
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title">Card Title</span>
+                                          <p>I am a very simple card. I am good at containing small bits of information.
+                                          I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          
+                              </div>
+                             </div>
+
+                      </div>
+
+                      <div class="col s5 pull-s7">
+                          <h2 class="white-text shp_text">Shop for Wide variety of Collections</h2>
+                          <div class="shp_btn"><button class="btn white green-text ">View All</button></div>
+                      </div>
+                    </div>
+                  
+              
                
+        
+                
+              </div>
+              
+
 				<div>
 				<h3 class="center"> Memories Nurtured with ease.</h3>
 				<div class="orange-line mx-auto my3"></div>
 				<div class="max-width-5 px3 md-pl4 mx-auto">
     <div class="clearfix process">
       <div class="col sm-col-12 md-col-5 step-container mt2 md-mt4 md-pr1">
-        <div class="process-step flex" data-target="image-one">
+        <div class="process-step flex" >
           
           <div class="step-content md-pl3">
             <h5>Choose Your Frame</h5>
             <p>Bring your art or photo to life in one of our 50 frame styles.</p>
           </div>
         </div>
-        <div class="process-step flex active" data-target="image-two">
+        <div class="process-step flex active" >
          
           <div class="step-content md-pl3">
             <h5>Share Your Artwork or Photo</h5>
             <p>Upload a digital photo or mail in an art piece or artifact using our free, prepaid packaging.</p>
           </div>
         </div>
-        <div class="process-step flex" data-target="image-three">
+        <div class="process-step flex" >
           
           <div class="step-content md-pl3">
             <h5>Unwrap and Enjoy!</h5>
@@ -189,7 +289,7 @@
       </div>
       <div class="col col-7 hide-on-med-and-down ">
         <div class="process-image">
-          <img  src="img/eaze.jpg" alt="Nirathisayam" width="100%" caption="false">
+          <img  class="responsive-img" src="img/eaze.jpg" alt="Nirathisayam" caption="false">
         </div>
         
       </div>
@@ -263,14 +363,21 @@
          
           </div>
             <!--Reviews-->
-            <div>
-                <h4 class="center"> What our customers say..</h4>
-<p><i>"One of the best shop for getting photos framed and other items related to photos, as there title says memories nurtured. Recommended place if you are looking something different for photos.They will share best possible ideas for you which is worth for money too and quality product is being delivered.
-  Wish you guys all the best for future"</i></p>
-  <p><i>"Good professional setup. The expectations are set right. Prompt delivery and good packaging of final delivery."</i></p>
-    <p><i>"I recently purchased a personalized photo frame.It was a great buying experience and delivered so quick! An amazing store with talented people who could take your ideas and turn it into a masterpiece!!"</i></p>
-
-            </div>
+            <div class="carousel carousel-slider center">
+                
+                <div class="carousel-item" href="#one!">
+                    <h4 class="tes container"><i>"One of the best shop for getting photos framed and other items related to photos, as there title says memories nurtured. Recommended place if you are looking something different for photos.They will share best possible ideas for you which is worth for money too and quality product is being delivered.
+                        Wish you guys all the best for future"</i></h4>
+                </div>
+                <div class="carousel-item" href="#two!">
+                    <h4 class="tes container"><i>"Good professional setup. The expectations are set right. Prompt delivery and good packaging of final delivery."</i></h4>
+                </div>
+                <div class="carousel-item" href="#three!">
+                    <h4 class="tes container"><i>"I recently purchased a personalized photo frame.It was a great buying experience and delivered so quick! An amazing store with talented people who could take your ideas and turn it into a masterpiece!!"</i></h4>
+                </div>
+               
+              </div>
+          
 
                     </div>
                     <div class="relative with-background">
@@ -305,22 +412,27 @@
             <li><a class="grey-text " href="how-it-works.html">HOW IT WORKS</a></li>
             <li><a class="grey-text " href="gallery-wall.html">GALLERY WALL</a></li>
             <li><a class="grey-text " href="artist.html">FOR ARTIST</a></li>
-            <li><a class="grey-text " href="carrers.html">CARRERS</a></li>
-            <li><a class="grey-text " href="contact.html">CONTACT</a></li>
           </ul>
         </div>
-        
         <div class="col l4 s12">
+            <ul>
+              <li><a class="grey-text " href="carrers.html">CARRERS</a></li>
+              <li><a class="grey-text " href="contact.html">CONTACT</a></li>
+              <li><a class="grey-text " href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+        
+        <div class="col l2 s12">
           
           <ul>
             <li><a class="grey-text" href="#!">TERMS OF SERVICE</a></li>
             <li><a class="grey-text" href="#!">PRIVACY POLICY</a></li>
-            <li><a class="grey-text" href="#!">ACCESSIBITY</a></li>
+            <li><a class="grey-text" href="#!">REFUND POLICY</a></li>
           </ul>  
         </div>
-        <div class="col l4 s12">
+        <div class="col l2 s8">
           <ul>
-            <li><img src="https://img.icons8.com/material/24/000000/facebook.png"> <img src="https://img.icons8.com/material/24/000000/instagram-new.png"> <img src="https://img.icons8.com/material/24/000000/pinterest.png"></li>
+            <li><a href="https://www.facebook.com/Nirathisayam" target="_blank"><img src="https://img.icons8.com/material/48/000000/facebook.png"></a> <a href="https://www.instagram.com/nirathisayam" target="_blank"><img src="https://img.icons8.com/material/48/000000/instagram-new.png"></a> <a href="https://in.pinterest.com/Nirathisayam/" target="_blank"><img src="https://img.icons8.com/material/48/000000/pinterest.png"></a></li>
            
           </ul>  
         </div>
@@ -359,6 +471,10 @@ if ("serviceWorker" in navigator) {
   }
 }
 
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
 
   </script>
 
