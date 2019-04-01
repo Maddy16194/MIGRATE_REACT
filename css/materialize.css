@@ -8387,6 +8387,7 @@ input[type=range]::-ms-thumb {
 
 .carousel.carousel-slider .carousel-fixed-item.with-indicators {
   bottom: 68px;
+  background-color: black;
 }
 
 .carousel.carousel-slider .carousel-item {
@@ -9198,4 +9199,31 @@ input[type=range]::-ms-thumb {
 }
 .frme_pdd{
   padding-top: 20px;
+}
+.contact{
+  background-color: #2e4e44;
+  height: 350px;
+}
+.green-line {
+  border: 0;
+  border-bottom: 2px solid green;
+  width: 150px;
+}
+.my2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ccht{
+  padding-left:70px;
+}
+.fbm{
+  padding-left:80px;
+  padding-top:20px;
+}
+.hllp{
+font-size: 20px;
 }
