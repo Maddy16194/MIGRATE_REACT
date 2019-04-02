@@ -9227,3 +9227,14 @@ input[type=range]::-ms-thumb {
 .hllp{
 font-size: 20px;
 }
+.cat_name{
+  Padding-top: 60px;
+  padding-right: 120px;
+}
+.shop-bg {
+  background-color:#1c4535;
+  height: 200px;
+ }
+ .shpp{
+   padding-left: 80px;
+ }
