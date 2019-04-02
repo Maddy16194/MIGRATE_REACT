@@ -9238,3 +9238,27 @@ font-size: 20px;
  .shpp{
    padding-left: 80px;
  }
+ .product_bg{
+  background: url(img/product_bg.png);
+  height:452px;
+}
+.shp_text{
+ padding-top: 120px;
+ 
+}
+.shp_btn{
+  padding-left: 100px;
+} 
+.process-image{
+  width:70%;
+  height:auto;
+}
+.tes{
+  padding-top:90px;
+}
+.empty_space{
+  padding-top: 50px;
+}
+.empty_space1{
+  padding-top: 21px;
+}
