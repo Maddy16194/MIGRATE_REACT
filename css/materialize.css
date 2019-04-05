@@ -2847,6 +2847,7 @@ video.responsive-video {
 
 .pinned {
   position: fixed !important;
+  padding-top: 450px;
 }
 
 /*********************
@@ -9261,4 +9262,26 @@ font-size: 20px;
 }
 .empty_space1{
   padding-top: 21px;
+}
+.shop{
+  background-color: #2e4e44;
+  height: 350px;
+  background-position: center center;
+  background-image:url(../img/shop.jpg);
+  background-size: cover;
+}
+.what_we_frame{
+  background-color: #2e4e44;
+  height: 350px;
+  background-position: center center;
+  background-image:url(../img/what_we_frame.jpg);
+  background-size: cover;
+}
+
+.faq{
+  background-color: #2e4e44;
+  height: 350px;
+  background-position: center center;
+  background-image:url(../img/faq.jpg);
+  background-size: cover;
 }
