@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Order Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style>
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <img class="responsive-img center" src="https://nswebapp-a9dc1.firebaseapp.com/static/media/test-2.8e4357b5.png">
+                
+                <table>
+                        <thead>
+                                <h4 class="center">You're appointment has been confirmed.</h4>
+                        </thead>
+                
+                        <tbody>
+                          <tr>
+                            <td><b>Name:</b></td>
+                            <td>{{NAME}}</td>
+                           
+                          </tr>
+                          <tr>
+                            <td><b>Phone Number</b></td>
+                            <td>{{PHONE_NUMBER}}</td>
+                           
+                          </tr>
+                          <tr>
+                            <td><b>What do you plan to include<br /> in your gallery wall?</b></td>
+                            <td>{{Select option}}</td>
+                            
+                          </tr>
+                          <tr>
+                                <td><b>When?</b></td>
+                                <td>{{DATE}}</td>
+                                
+                            </tr>
+                            <tr>
+                                    <td><b>What time would you like <br /> us to visit?</b></td>
+                                    <td>{{TIME}}</td>
+                                    
+                             </tr>
+                             <tr>
+                                    <td><b>Paid</b></td>
+                                    <td><b class="red-text">INR 250/-</b></td>
+                                    
+                             </tr>
+                        </tbody>
+                      </table>
+                     
+                      <table>
+                            <thead>
+                                 <h4>Below are the details of our executive.</h4>
+                            </thead>
+                    
+                            <tbody>
+                              <tr>
+                                <td><b> Executive Name:</b></td>
+                                <td>{{NAME}}</td>
+                               
+                              </tr>
+                              <tr>
+                                <td><b>Phone Number</b></td>
+                                <td>{{PHONE_NUMBER}}</td>
+                               
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                      <p>If you wish to cancel the booking or re-schedule <a href="">Click Here</a></p>
+    </div>
+            <p>
+                    If you need further assistance with your order, please mail us at <a href="mailto:support@nirathisayam.com">support@nirathisayam.com</a>.
+                <br><br>
+                    We hope to see you again soon!<br>
+                    <b>Nirathisayam.com</b>
+    
+              </p>
+          </div>
+         
+    </div>
+   
+</body>
+</html>
