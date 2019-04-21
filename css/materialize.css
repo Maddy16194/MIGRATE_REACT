@@ -9201,12 +9201,24 @@ input[type=range]::-ms-thumb {
 .frme_pdd{
   padding-top: 20px;
 }
+.hme_pdd{
+  padding-left: 60px;
+}
+.hme_text{
+  padding-left: 100px;
+}
 .art_pdd{
   padding-top: 50px;
 }
 .contact{
   background-color: #2e4e44;
   height: 350px;
+}
+.home{
+  background-image: url('../img/slide-bg.png');
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .business{
   background-image: url('../img/business.jpg');
