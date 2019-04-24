@@ -2947,7 +2947,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: ##ffffff;
+  background-color: #ffffff;
 }
 
 .page-footer .footer-copyright {
@@ -9215,13 +9215,13 @@ input[type=range]::-ms-thumb {
   height: 350px;
 }
 .home{
-  background-image: url('../img/slide-bg.png');
+  /* background-image: url('../img/slide-bg.png'); */
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .business{
-  background-image: url('../img/business.jpg');
+  /* background-image: url('../img/business.jpg'); */
   height: 350px;
 }
 .we_offer{
@@ -9229,7 +9229,7 @@ input[type=range]::-ms-thumb {
 }
 .art{	
   height: 350px;
-  background-image: url('../img/art.jpg')
+  /* background-image: url('../img/art.jpg') */
 	/* color: #fff;
 	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
@@ -9310,7 +9310,7 @@ font-size: 20px;
    padding-left: 80px;
  }
  .product_bg{
-  background: url(img/product_bg.png);
+  /* background: url(img/product_bg.png); */
   height:452px;
 }
 .shp_text{
@@ -9337,14 +9337,14 @@ font-size: 20px;
   background-color: #2e4e44;
   height: 350px;
   background-position: center center;
-  background-image:url(../img/shop.jpg);
+  /* background-image:url(../img/shop.jpg); */
   background-size: cover;
 }
 .what_we_frame{
   background-color: #2e4e44;
   height: 350px;
   background-position: center center;
-  background-image:url(../img/what_we_frame.jpg);
+  /* background-image:url(../img/what_we_frame.jpg); */
   background-size: cover;
 }
 
@@ -9352,7 +9352,7 @@ font-size: 20px;
   background-color: #2e4e44;
   height: 350px;
   background-position: center center;
-  background-image:url(../img/faq.jpg);
+  /* background-image:url(../img/faq.jpg); */
   background-size: cover;
 }
 /*! Basscss | http://basscss.com | MIT License */
