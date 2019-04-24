@@ -9274,16 +9274,7 @@ input[type=range]::-ms-thumb {
 	} */
 }
 
-h1,
-h6 {
-	font-family: 'Open Sans';
-	font-weight: 300;
-	text-align: center;
-	
-	top: 45%;
-	right: 0;
-	left: 0;
-}
+
 .green-line {
   border: 0;
   border-bottom: 2px solid green;
@@ -15719,8 +15710,7 @@ td {
 
 @media (max-width: 51.999em) {
   .with-background .nsui-hero {
-      height:350px;
-      width:1280px;
+      height:117px
   }
 }
 
